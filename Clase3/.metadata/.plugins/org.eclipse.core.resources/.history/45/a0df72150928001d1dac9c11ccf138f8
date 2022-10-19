@@ -1,0 +1,29 @@
+/*
+ ============================================================================
+ Name        : 3.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int getInt(char *mensaje);
+
+int main(void) {
+
+	return EXIT_SUCCESS;
+}
+
+int getInt(char *mensaje)
+{
+	int numero;
+
+	printf("%s", mensaje);
+	scanf("%d", &numero);
+
+	return numero;
+}

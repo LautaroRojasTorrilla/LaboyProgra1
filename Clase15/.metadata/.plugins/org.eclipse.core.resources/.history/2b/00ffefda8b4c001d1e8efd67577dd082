@@ -1,0 +1,62 @@
+/*
+ ============================================================================
+ Name        : Punteros_Sabado.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ Duncion que reciba en un array cual es el numero negativo mas grande.
+ Además debe retornar si encontró o no un número negativo.
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int RetornarNegativoMax_SiHay(char cadena[], int len);
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+
+	return EXIT_SUCCESS;
+}
+
+int RetornarNegativoMax_SiHay(char cadena[], int len)
+{
+	int retorno = 1;
+	int i;
+	int maximoIngresado;
+
+	if (cadena != NULL)
+	{
+		if (len > 0)
+		{
+			if(cadena >= 0)
+			{
+				puts("No hay numeros negativos");
+			}
+			else
+			{
+				retorno = 0;
+				for(i = 0; i<len; i++)
+				{
+					if(cadena[i] > maximoIngresado || i == 0)
+					{
+						maximoIngresado = cadena[i];
+						retorno = cadena[i];
+					}
+				}
+			}
+		}else{
+			retorno = 2;
+			puts("El array no es null.");
+		}
+	}else{
+		retorno= 3;
+		puts("El array no es null.");
+	}
+	return retorno;
+
+	return retorno;
+}

@@ -1,0 +1,49 @@
+/*
+ ============================================================================
+ Name        : Primer_Parcial_Progra.c
+ Author      : Rojas Torrilla Lautaro
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Funcion.h"
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	float bufferImporte;
+	float importe;
+	int bufferPorcentaje;
+	int porcentaje;
+	float calculo;
+
+	if (utn_getFloat("Favor de ingresar un importe \n", "Error, debe ingresar un numero entre 1 y 50000 \n", MIN_IMPORTE, MAX_IMPORTE, 2, &bufferImporte)==0)
+	{
+		importe = bufferImporte;
+	}
+	else
+	{
+		puts("Error, reiniciar programa.");
+	}
+
+	if (utn_getInt("Favor de ingresar el porcentaje: \n", "Error, ingrese entre 1 y 100", 1, MAX_PORCENTAJE, 2, &bufferPorcentaje)==0)
+	{
+		porcentaje = bufferPorcentaje;
+	}
+	else
+	{
+		puts("Error, reiniciar programa.");
+	}
+
+	calculo = FuncionCalculoDescuento(importe, porcentaje);
+
+	printf("El importe original es %.2f, el importe con descuento es %.2f", importe, calculo);
+
+
+
+	return EXIT_SUCCESS;
+}

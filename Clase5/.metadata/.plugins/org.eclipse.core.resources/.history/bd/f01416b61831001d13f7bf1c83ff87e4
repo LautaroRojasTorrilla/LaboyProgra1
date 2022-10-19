@@ -1,0 +1,115 @@
+/*
+ * Funciones.c
+ *
+ *  Created on: 5 sep. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+#include "Funciones.h"
+
+int GetInt(char *mensaje, int minimo, int maximo)
+{
+	int numero;
+
+	do{
+		printf("%s", mensaje);
+		scanf("%d", &numero);
+	}
+	while(numero > maximo || numero < minimo || minimo > maximo);
+
+	return numero;
+}
+
+void CargarVectorEnteros(char *mensaje, int numeros[], int tam, int max, int min)
+{
+	for (int i = 0; i < tam; i++) {
+		numeros[i] = GetInt(mensaje, min, max);
+	}
+}
+
+int ContarPositivos (int numeros[], int tam)
+{
+	int contador = 0;
+
+	for (int i = 0; i < tam; ++i) {
+		if(numeros[i]>0)
+		{
+			contador++;
+		}
+	}
+	return contador;
+}
+
+int ContarNegativos (int numeros[], int tam)
+{
+	int contador = 0;
+
+	for (int i = 0; i < tam; ++i) {
+		if(numeros[i]<0)
+		{
+			contador++;
+		}
+	}
+	return contador;
+}
+
+int AcumularVectorPares(int numeros[], int tam)
+{
+	int acumulador = 0;
+	for (int i = 0; i < tam; i++) {
+		if(numeros[i] % 2 == 0){
+			acumulador += numeros[i];
+		}
+	}
+	return acumulador;
+}
+
+int MayorVectorImpar(int numeros[], int tam)
+{
+	int mayorImpar;
+	for(int i=0;i<tam;i++)
+	{
+		if(numeros[i]%2 != 0)
+		{
+			if(numeros[i]>mayorImpar||i==0)
+			{
+				mayorImpar = numeros[i];
+			}
+		}
+	}
+	return mayorImpar;
+}
+
+void MostrarVectorEnteros(int numeros[], int tam)
+{
+	for (int i = 0; i < tam; i++) {
+		printf("%d\n", numeros[i]);
+	}
+}
+
+void MostrarVectorPares(int numeros[], int tam)
+{
+	printf("\nLos numeros pares ingresados son:");
+	for (int i = 0; i < tam; i++) {
+		if (numeros[i] % 2 != 0) {
+			printf("%d\n", numeros[i]);
+		}
+	}
+}
+
+void MostrarVectorPosicionImpar(int numeros[], int tam)
+{
+	printf("\nLos numeros de las posiciones impares son: ");
+	for(int i=0; i < tam; i++)
+	{
+		if(i %2 != 0)
+		{
+			printf("\n%d en %d",numeros[i],i);
+		}
+	}
+}
+
+void MostrarVectorNumerosRepetidos(int numeros[], int tam)
+{
+	printf("\nLos numeros que se repiten son: ");
+}

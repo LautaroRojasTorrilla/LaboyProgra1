@@ -1,0 +1,1350 @@
+/*
+ * Libro.c
+ *
+ *  Created on: 28 sep. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+#include "Libro.h"
+
+static int genID(void);
+
+/// @fn void eFecha_printOne(eFecha)
+/// @brief funcion para imprimir una fecha
+///
+/// @param fecha es void, muestra una impresion
+void eFecha_printOne(eFecha fecha)
+{
+	printf("%2d/%2d/%d%5d\n\n", fecha.dia, fecha.mes, fecha.anio,fecha.isEmpty);
+}
+
+/// @fn int eFecha_printAll(eFecha[], int, int)
+/// @brief funcion para imprimir el array de fechas
+///
+/// @param arrayFecha array a evaluar
+/// @param len tamaño del array
+/// @param state estado del array
+/// @return -1 si no pasa las validaciones, 0 si da todo ok y muestra el listado
+int eFecha_printAll(eFecha arrayFecha[], int len, int state)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayFecha != NULL)
+	{
+		if (len > 0)
+		{
+			retorno = 0;
+			//para imprimir todos puedo cambiarle el estado a -1000 por ejemplo. Uno que no coincida.
+			for (i = 0; i < len; ++i)
+			{
+				if (arrayFecha[i].isEmpty == state)
+				{
+					eFecha_printOne(arrayFecha[i]);
+				}
+			}
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+/// @fn eFecha eFechaLoadOne()
+/// @brief funcion para cargar 1 fecha, evalua con los get
+///
+/// @return la fecha cargada
+eFecha eFechaLoadOne()
+{
+	eFecha f;
+	eFecha bufferF;
+
+	if(utn_getInt("Ingrese el año: \n", "Error. Ingrese entre 1776 y 2022: \n", 1776, 2022, 2, &bufferF.anio)==0)
+	{
+		f.anio = bufferF.anio;
+		printf("Ingresaste el año %d\n", f.anio);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	if(utn_getInt("Ingrese el mes: \n", "Error. Ingrese entre 1 y 12: \n", 1, 12, 2, &bufferF.mes)==0)
+	{
+		f.mes = bufferF.mes;
+		printf("Ingresaste el año %d\n", f.anio);
+		switch (f.mes) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			if(utn_getInt("Ingrese el dia: \n", "Error. Ingrese entre 1 y 31: \n", 1, 31, 2, &bufferF.dia)==0)
+			{
+				f.dia = bufferF.dia;
+			}
+			else
+			{
+				puts("Error\n");
+			}
+			break;
+		case 2:
+			if(utn_getInt("Ingrese el dia: \n", "Error. Ingrese entre 1 y 28: \n", 1, 28, 2, &bufferF.dia)==0)
+			{
+				f.dia = bufferF.dia;
+			}
+			else
+			{
+				puts("Error\n");
+			}
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			if(utn_getInt("Ingrese el dia: \n", "Error. Ingrese entre 1 y 30: \n", 1, 30, 2, &bufferF.dia)==0)
+			{
+				f.dia = bufferF.dia;
+			}
+			else
+			{
+				puts("Error\n");
+			}
+			break;
+		default:
+			puts("Ingrese una opcion valida");
+			break;
+		}
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	f.isEmpty = 1;
+
+	return f;
+}
+
+//
+
+/// @fn void ePais_printOne(ePais)
+/// @brief funcion para imprimir un pais.
+///
+/// @param pais es void, muestra una impresion
+void ePais_printOne(ePais pais)
+{
+	printf("|%5d|%-20s|%5d\n",
+			pais.idPais, pais.descripcionPais, pais.isEmpty);
+}
+
+/// @fn int ePais_printAll(ePais[], int, int)
+/// @brief funcion para imprimir el array de paises
+///
+/// @param arrayPais array a evaluar
+/// @param len tamaño del array
+/// @param state estado del array
+/// @return -1 si no pasa las validaciones, 0 si da todo ok y muestra el listado
+int ePais_printAll(ePais arrayPais[], int len, int state)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayPais != NULL)
+	{
+		if (len > 0)
+		{
+			retorno = 0;
+			printf("%-6s", "|   ID");
+			printf("%-21s", "|DESCRIPCION");
+			printf("%-6s", "|ESTADO\n\n");
+			for (i = 0; i < len; ++i)
+			{
+				if (arrayPais[i].isEmpty == state)
+				{
+					ePais_printOne(arrayPais[i]);
+				}
+			}
+			printf("\n");
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+//
+
+/// @fn void eEditorial_printOne(eEditorial)
+/// @brief funcion para imprimir una editorial
+///
+/// @param edit es void, muestra una impresion
+void eEditorial_printOne(eEditorial edit)
+{
+	printf("|%5d|%-20s|%5d\n",
+			edit.idEditorial, edit.descripcionEditorial, edit.isEmpty);
+}
+
+/// @fn int eEditorial_printAll(eEditorial[], int, int)
+/// @brief funcion para imprimir el array de editoriales
+///
+/// @param arrayEdit array a evaluar
+/// @param len tamaño del array
+/// @param state estado del array
+/// @return -1 si no pasa las validaciones, 0 si da todo ok y muestra el listado
+int eEditorial_printAll(eEditorial arrayEdit[], int len, int state)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayEdit != NULL)
+	{
+		if (len > 0)
+		{
+			retorno = 0;
+			retorno = 0;
+			printf("%-6s", "|   ID");
+			printf("%-21s", "|DESCRIPCION");
+			printf("%-6s", "|ESTADO\n\n");
+			for (i = 0; i < len; ++i)
+			{
+				if (arrayEdit[i].isEmpty == state)
+				{
+					eEditorial_printOne(arrayEdit[i]);
+				}
+			}
+			printf("\n");
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+//
+
+/// @fn void eAutor_printOne(eAutor)
+/// @brief funcion para imprimir un autor
+///
+/// @param autor es void, muestra una impresion
+void eAutor_printOne(eAutor autor)
+{
+	printf("|%5d|%-20s|%6d|%5d\n",
+			autor.idAutor, autor.nombreAutor, autor.idNacionalidad_FK,autor.isEmpty);
+}
+
+/// @fn int eAutor_printAll(eAutor[], int, int)
+/// @brief funcion para imprimir el array de autores
+///
+/// @param arrayAutor array a evaluar
+/// @param len tamaño del array
+/// @param state estado del array
+/// @return -1 si no pasa las validaciones, 0 si da todo ok y muestra el listado
+int eAutor_printAll(eAutor arrayAutor[], int len, int state)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayAutor != NULL)
+	{
+		if (len > 0)
+		{
+			retorno = 0;
+			printf("%-6s", "|   ID");
+			printf("%-21s", "|NOMBRE");
+			printf("%-6s", "|ID NAC");
+			printf("%-6s", "|ESTADO\n\n");
+			for (i = 0; i < len; ++i)
+			{
+				if (arrayAutor[i].isEmpty == state)
+				{
+					eAutor_printOne(arrayAutor[i]);
+				}
+			}
+			printf("\n");
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+
+//
+
+/// @fn int eLibro_initArray(eLibro[], int)
+/// @brief Iniciliza el array de libros
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return -1 si no pasa las validaciones, - 2 error len, -3 error array null, 0 si inicializa ok
+int eLibro_initArray(eLibro arrayLibro[], int len)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0)
+		{
+			retorno=0;
+			for (i = 0; i < len; ++i)
+			{
+				arrayLibro[i].isEmpty = LIBRE;
+			}
+		}else{
+			retorno = -2;
+		}
+	}else{
+		retorno= -3;
+	}
+	return retorno;
+}
+
+/// @fn void eLibro_printOne(eLibro)
+/// @brief funcion para imprimir un libro
+///
+/// @param lib
+/// @return es void, muestra una impresion
+void eLibro_printOne(eLibro lib)
+{
+	printf("|%5d|%-29s|%2d/%2d/%d   |%7.2f  |%5d|%5d|%5d|%5d\n",
+			lib.idLibro, lib.titulo, lib.fechaDePublicacion.dia, lib.fechaDePublicacion.mes, lib.fechaDePublicacion.anio,
+			lib.importe, lib.idAutor_FK, lib.idEditorial_FK, lib.idTipo_FK, lib.isEmpty);
+}
+
+/// @fn int eLibro_printAll(eLibro[], int, int)
+/// @brief funcion para imprimir el array de libros
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @param state estado del array
+/// @return -1 si no pasa las validaciones, 0 si da todo ok y muestra el listado
+int eLibro_printAll(eLibro arrayLibro[], int len, int state)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0)
+		{
+			retorno = 0;
+			printf("%-6s", "|   ID");
+			printf("%-30s", "|NOMBRE");
+			printf("%-6s", "|FECHA DE PUB.");
+			printf("%-10s", "|IMPORTE");
+			printf("%-6s", "|ID AUT");
+			printf("%-6s", "|ID EDI");
+			printf("%-6s", "|ID TIPO");
+			printf("%-10s", "|ESTADO");
+			printf("\n\n");
+			for (i = 0; i < len; ++i)
+			{
+				if (arrayLibro[i].isEmpty == state)
+				{
+					eLibro_printOne(arrayLibro[i]);
+				}
+			}
+			printf("\n");
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+/// @fn int eLibro_printAllAutoryEditorial(eLibro[], eEditorial[], eAutor[], int, int, int, int)
+/// @brief funcion que imprime libros relacionando estructuras autores y editoriales - PK y FK
+///
+/// @param arrayLibro array a evaluar
+/// @param arrayEdit array a evaluar
+/// @param arrayAutor array a evaluar
+/// @param len tamaño del array
+/// @param len2 tamaño del array
+/// @param len3 tamaño del array
+/// @param state estado
+/// @return -1 si no pasa las validaciones, -2 error len, -3 array null y 0 si da ok e imprime.
+int eLibro_printAllAutoryEditorial(eLibro arrayLibro[], eEditorial arrayEdit[], eAutor arrayAutor[] ,int len, int len2, int len3, int state)
+{
+	int retorno = -1;
+	int i;
+	int j;
+	int k;
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0 && len2 > 0 && len3 >0)
+		{
+			retorno = 0;
+			printf("%-6s", "|   ID");
+			printf("%-30s", "|NOMBRE");
+			printf("%-6s", "|FECHA DE PUB.");
+			printf("%-10s", "|IMPORTE");
+			printf("%-21s", "|NOMBRE");
+			printf("%-21s", "|DESCRIPCION");
+			printf("\n\n");
+			for (i = 0; i < len; ++i) // libros
+			{
+				for (j = 0; j < len2; ++j) //autores
+				{
+					for (k = 0; k < len3; ++k)// editorial
+					{
+						if ((arrayLibro[i].isEmpty == state) &&
+								(arrayLibro[i].idAutor_FK == arrayAutor[j].idAutor) &&
+								(arrayLibro[i].idEditorial_FK == arrayEdit[k].idEditorial))
+						{
+							printf("|%5d|%-29s|%2d/%2d/%d   |%7.2f  |%-20s|%-20s\n",
+									arrayLibro[i].idLibro, arrayLibro[i].titulo, arrayLibro[i].fechaDePublicacion.dia, arrayLibro[i].fechaDePublicacion.mes,
+									arrayLibro[i].fechaDePublicacion.anio, arrayLibro[i].importe, arrayAutor[j].nombreAutor, arrayEdit[k].descripcionEditorial);
+						}
+					}
+
+				}
+			}
+			printf("\n");
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+int eLibro_printTipoPapel(eLibro arrayLibro[], eTipo arrayTipos[], int len, int len2, int state)
+{
+	int retorno = -1;
+	int i;
+	int j;
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0 && len2 >0)
+		{
+			retorno = 0;
+			printf("%-6s", "|   ID");
+			printf("%-30s", "|NOMBRE");
+			printf("%-6s", "|FECHA DE PUB.");
+			printf("%-10s", "|IMPORTE");
+			printf("%-21s", "|DESCRIPCION");
+			printf("\n\n");
+			for (i = 0; i < len; ++i) // libros
+			{
+				for (j = 0; j < len2; ++j) //autores
+				{
+					if ((arrayLibro[i].isEmpty == state) &&
+							(arrayLibro[i].idTipo_FK == arrayTipos[j].idTipo) &&
+							(arrayTipos[j].idTipo == 1))
+					{
+						printf("|%5d|%-29s|%2d/%2d/%d   |%7.2f  |%-20s\n",
+								arrayLibro[i].idLibro, arrayLibro[i].titulo, arrayLibro[i].fechaDePublicacion.dia, arrayLibro[i].fechaDePublicacion.mes,
+								arrayLibro[i].fechaDePublicacion.anio, arrayLibro[i].importe, arrayTipos[j].descripcionTipo);
+					}
+				}
+			}
+			printf("\n");
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len3, int decada, int state)
+{
+	int retorno = -1;
+	int i;
+	int j;
+	int k;
+
+	if (arrayLibro != NULL)
+	{
+		if (len1 > 0 && len2 > 0 && len3 >0)
+		{
+			retorno = 0;
+			printf("%-6s", "|   ID");
+			printf("%-30s", "|NOMBRE");
+			printf("%-6s", "|FECHA DE PUB.");
+			printf("%-10s", "|IMPORTE");
+			printf("%-21s", "|NOMBRE");
+			printf("%-21s", "|DESCRIPCION");
+			printf("\n\n");
+			for (i = 0; i < len1; ++i) // libros
+			{
+				for (j = 0; j < len2; ++j) //autores
+				{
+					for (k = 0; k < len3; ++k)// fecha
+					{
+						if ((arrayLibro[i].isEmpty == state) &&
+								(arrayLibro[i].idAutor_FK == arrayAutor[j].idAutor) &&
+								(arrayLibro[i].fechaDePublicacion.anio == arrayFecha[k].anio))
+						{
+							printf("|%5d|%-29s   |%7.2f  |%-20s|%d\n",
+									arrayLibro[i].idLibro, arrayLibro[i].titulo, arrayLibro[i].importe, arrayAutor[j].nombreAutor, arrayFecha[k].anio);
+						}
+					}
+
+				}
+			}
+			printf("\n");
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+/// @fn eLibro eLibro_LoadOne()
+/// @brief funcion para cargar un libro, evalua con la biblio input
+///
+/// @return el libro cargado
+eLibro eLibro_LoadOne()
+{
+	eLibro l;
+	eLibro bufferL;
+	eAutor arrayAutores[MAX_AUTOR] = {
+			{1,"BORGES",1,1},
+			{2,"MARX",3,1},
+			{3,"TWAIN",2,1},
+			{4,"TOLSTOI",4,1},
+			{5,"GARCIA MARQUEZ",5,1},
+			{6,"SUSKIND",3,1},
+			{7,"DOSTOYEVSKI",4,1},
+			{8,"SORIANO",1,1},
+			{9,"POE",2,1},
+			{10,"HERNANDEZ",1,1}
+	};
+
+	eEditorial arrayEditoriales[MAX_EDPAIS] = {
+			{1,"KAPELUSZ",1},
+			{2,"ESTRADA",1},
+			{3,"ZORZAL",1},
+			{4,"MINOTAURO",1},
+			{5,"SUDAMERICANA",1}
+	};
+
+	eTipo arrayTipos[MAX_TIPOS] = {
+			{1, "PAPEL", OCUPADO},
+			{2, "EBOOK", OCUPADO}
+	};
+
+	if(utn_getStringAndNum("Ingrese el título del libro: \n", "Error, debe ingresar 51 caracteres como máximo: \n", 1, MAX_CHAR, bufferL.titulo)==0)
+	{
+		strncpy(l.titulo, bufferL.titulo, sizeof(l.titulo));
+		printf("Ingresaste: %s\n", l.titulo);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	l.fechaDePublicacion = eFechaLoadOne();
+
+	if(utn_getFloat("Ingrese el Precio:\n", "Error. debe ingresar un valor entre 1 y 10000\n", 1, MAX_PRICE, 2, &bufferL.importe)==0)
+	{
+		l.importe=bufferL.importe;
+		printf("Es: %.2f\n", l.importe);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	eAutor_printAll(arrayAutores, MAX_AUTOR, OCUPADO);
+	if(utn_getInt("Ingrese el ID del autor: \n", "Ingrese un valor entre 1 y 5\n", 1, MAX_AUTOR, 1, &bufferL.idAutor_FK)==0)
+	{
+		l.idAutor_FK=bufferL.idAutor_FK;
+		printf("Es: %d\n", l.idAutor_FK);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	eEditorial_printAll(arrayEditoriales, MAX_EDPAIS, OCUPADO);
+	if(utn_getInt("Ingrese el ID de la editorial: \n", "Ingrese un valor entre 1 y 10\n", 1, MAX_EDPAIS, 1, &bufferL.idEditorial_FK)==0)
+	{
+		l.idEditorial_FK=bufferL.idEditorial_FK;
+		printf("Es: %d\n", l.idEditorial_FK);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	eTipo_printAll(arrayTipos, MAX_TIPOS, OCUPADO);
+	if(utn_getInt("Ingrese el ID del ripo de libro: \n", "Ingrese un valor entre 1 y 2\n", 1, MAX_TIPOS, 1, &bufferL.idTipo_FK)==0)
+	{
+		l.idTipo_FK=bufferL.idTipo_FK;
+		printf("Es: %d\n", l.idTipo_FK);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	return l;
+}
+
+/// @fn int eLibro_SearchEmpty(eLibro[], int)
+/// @brief funcion para buscar un espacio libre
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return -1 si no pasa las validaciones, - 2 error len, -3 error array null, la posicion I libre si da ok.
+int eLibro_SearchEmpty(eLibro arrayLibro[], int len)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0)
+		{
+			//retorno = 0;
+			for (i = 0; i < len; i++)
+			{
+				if (arrayLibro[i].isEmpty == LIBRE)
+				{
+					retorno = i;
+					break;
+					//No tiene sentido seguir iterando
+				}
+			}
+		}else{
+			retorno = -2;
+			//mal el len
+		}
+	}else{
+		retorno= -3;
+		//vino NULL
+	}
+	return retorno;
+}
+
+/// @fn int eLibro_SearchOcupado(eLibro[], int)
+/// @brief funcion para buscar un espacio ocupado
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return -1 si no pasa las validaciones, - 2 error len, -3 error array null, la posicion I ocupada si da ok.
+int eLibro_SearchOcupado(eLibro arrayLibro[], int len)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0)
+		{
+			//retorno = 0;
+			for (i = 0; i < len; i++)
+			{
+				if (arrayLibro[i].isEmpty == OCUPADO)
+				{
+					retorno = i;
+					break;
+					//No tiene sentido seguir iterando
+				}
+			}
+		}else{
+			retorno = -2;
+			//mal el lenaño
+		}
+	}else{
+		retorno= -3;
+		//vino NULL
+	}
+	return retorno;
+}
+
+/// @fn int eLibro_SearchIndexByID(eLibro[], int, int)
+/// @brief busca index por ID
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @param id id a buscar
+/// @return -1 si no pasa las validaciones, - 2 error len, -3 error array null, posicion I del ID  si da ok.
+int eLibro_SearchIndexByID(eLibro arrayLibro[], int len, int id)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0)
+		{
+			retorno = 0;
+			for (i = 0; i < len; i++)
+			{
+				if (arrayLibro[i].isEmpty == OCUPADO)
+				{
+					if (arrayLibro[i].idLibro == id)
+					{
+						retorno = i;
+						break;
+					}
+				}
+			}
+		}else{
+			retorno = -2;
+			//mal el lenaño
+		}
+	}else{
+		retorno= -3;
+		//vino NULL
+	}
+	return retorno;
+}
+
+/// @fn int eLibro_Charge(eLibro[], int)
+/// @brief funcion para alta de libros, verifica que haya un espacio libre y cuando carga ok le da el estado de ocupado
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return -1 si el array es nulo, -2 si le len esta mal definido, -3 si el array esta lleno, sino retorna 0 y carga el libro
+int eLibro_Charge(eLibro arrayLibro[], int len)
+{
+	int retorno = 0;
+	int indexLibre;
+	eLibro bufferLibro;
+
+	indexLibre = eLibro_SearchEmpty(arrayLibro, len);
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0)
+		{
+			if (indexLibre >= 0)
+			{
+				//CARGO DATOS NO GENERICOS
+				bufferLibro = eLibro_LoadOne();
+
+				//SI ESTA TODO BIEN - LE DOY UN ID UNICO
+				bufferLibro.idLibro = genID();
+				//CAMBIO ESTADO A OCUPADO
+				bufferLibro.isEmpty = OCUPADO;
+				//COPIA AUXILIAR EN ARRAY EN POSICION OBTENIDA LIBRE
+				arrayLibro[indexLibre] = bufferLibro;
+				retorno = indexLibre;
+			}else{
+				//array lleno
+				retorno = -3;
+				puts("El array esta lleno.\n");
+			}
+		}else{
+			// len mal definido
+			retorno = -2;
+			puts("retorno el -2");
+		}
+	}else{
+		//array nulo
+		retorno= -1;
+		puts("retorno el -1");
+	}
+	return retorno;
+}
+
+/// @fn int eLibro_Discharge(eLibro[], int)
+/// @brief funcion para dar de baja un libro, verifica que haya cargado
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return -1 si no pasa las validaciones, - 2 error len, -3 error array null, 0 si da baja ok
+int eLibro_Discharge(eLibro arrayLibro[], int len)
+{
+	int retorno = -1;
+	int indexOcupado;
+
+	indexOcupado = eLibro_SearchOcupado(arrayLibro, len);
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0)
+		{
+			eLibro_printAll(arrayLibro, len, OCUPADO);
+			fflush(stdin);
+			utn_getInt("Seleccione el ID que desea dar de baja: ", "Error, debe seleccionar un ID valido: ", 100, 199, 2, &indexOcupado);
+			for (int i = 0; i < len; ++i)
+			{
+				if(indexOcupado == arrayLibro[i].idLibro)
+				{
+					arrayLibro[i].isEmpty = BAJA;
+					retorno = 0;
+					break;
+				}
+			}
+		}else{
+			// len mal definido
+			retorno = -2;
+			puts("retorno el -2");
+		}
+	}else{
+		//array nulo
+		retorno= -1;
+		puts("retorno el -1");
+	}
+	return retorno;
+}
+
+/// @fn int eLibro_Modify(eLibro[], int)
+/// @brief funcion para modificar un libro cargado, valida que haya alguno cargado
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return -1 si no pasa las validaciones, - 2 error len, -3 error array null, 0 si modifica  ok
+int eLibro_Modify(eLibro arrayLibro[], int len)
+{
+	int retorno = -1;;
+	int bufferID;
+	int bufferIndex;
+	int atributoAModificar;
+	eLibro bufferLibro;
+
+	eAutor arrayAutores[MAX_AUTOR] = {
+			{1,"BORGES",1,1},
+			{2,"MARX",3,1},
+			{3,"TWAIN",2,1},
+			{4,"TOLSTOI",4,1},
+			{5,"GARCIA MARQUEZ",5,1},
+			{6,"SUSKIND",3,1},
+			{7,"DOSTOYEVSKI",4,1},
+			{8,"SORIANO",1,1},
+			{9,"POE",2,1},
+			{10,"HERNANDEZ",1,1}
+	};
+
+	eEditorial arrayEditoriales[MAX_EDPAIS] = {
+			{1,"KAPELUSZ",1},
+			{2,"ESTRADA",1},
+			{3,"ZORZAL",1},
+			{4,"MINOTAURO",1},
+			{5,"SUDAMERICANA",1}
+	};
+
+	eTipo arrayTipos[MAX_TIPOS] = {
+			{1, "PAPEL", OCUPADO},
+			{2, "EBOOK", OCUPADO}
+	};
+
+	if (arrayLibro != NULL)
+	{
+		if (len > 0)
+		{
+			eLibro_printAll(arrayLibro, len, OCUPADO);
+			fflush(stdin);
+
+			if(utn_getInt("Ingrese el ID que desa modificar: \n", "Error, ingrese un ID válido. Entre 100 y 199: \n",100, 199, 2, &bufferID) == 0)
+			{
+				bufferIndex = eLibro_SearchIndexByID(arrayLibro, len, bufferID);
+
+				if(bufferIndex > -1)
+				{
+
+					bufferLibro = arrayLibro[bufferIndex];
+					eLibro_printOne(bufferLibro);
+				}
+			}
+			do {
+				utn_getInt("1.TITULO\n2.FECHA DE PUBLICACION\n3.IMPORTE\n4.ID AUTOR\n5.ID EDITORIAL\n6.TIPO DE LIBRO\n7.SALIR\n\nIndique el campo a modificar: \n",
+						"Error. Elija entre 1 y 7", 1, 7, 2, &atributoAModificar);
+
+				switch (atributoAModificar)
+				{
+				case 1:
+					if(utn_getStringAndNum("Ingrese el título del libro: \n", "Error, debe ingresar 51 caracteres como máximo: \n", 1, MAX_CHAR, bufferLibro.titulo)==0)
+					{
+						strncpy(arrayLibro[bufferIndex].titulo, bufferLibro.titulo, sizeof(arrayLibro[bufferIndex].titulo));
+						printf("Ingresaste: %s\n", arrayLibro[bufferIndex].titulo);
+					}
+					else
+					{
+						puts("Error\n");
+					}
+					break;
+				case 2:
+					arrayLibro[bufferIndex].fechaDePublicacion = eFechaLoadOne();
+					break;
+				case 3:
+					if(utn_getFloat("Ingrese el Precio:\n", "Error. debe ingresar un valor entre 1 y 10000\n", 1, MAX_PRICE, 2, &bufferLibro.importe)==0)
+					{
+						arrayLibro[bufferIndex].importe=bufferLibro.importe;
+						printf("Es: %.2f\n", arrayLibro[bufferIndex].importe);
+					}
+					else
+					{
+						puts("Error\n");
+					}
+					break;
+				case 4:
+					eAutor_printAll(arrayAutores, MAX_AUTOR, OCUPADO);
+					if(utn_getInt("Ingrese el ID del autor: \n", "Ingrese un valor entre 1 y 5\n", 1, MAX_AUTOR, 1, &bufferLibro.idAutor_FK)==0)
+					{
+						arrayLibro[bufferIndex].idAutor_FK = bufferLibro.idAutor_FK;
+						printf("Es: %d\n", arrayLibro[bufferIndex].idAutor_FK);
+					}
+					else
+					{
+						puts("Error\n");
+					}
+					break;
+				case 5:
+					eEditorial_printAll(arrayEditoriales, MAX_EDPAIS, OCUPADO);
+					if(utn_getInt("Ingrese el ID de la editorial: \n", "Ingrese un valor entre 1 y 10\n", 1, MAX_EDPAIS, 1, &bufferLibro.idEditorial_FK)==0)
+					{
+						arrayLibro[bufferIndex].idEditorial_FK = bufferLibro.idEditorial_FK;
+						printf("Es: %d\n", arrayLibro[bufferIndex].idEditorial_FK);
+					}
+					else
+					{
+						puts("Error\n");
+					}
+					break;
+				case 6:
+					eTipo_printAll(arrayTipos, MAX_TIPOS, OCUPADO);
+					if(utn_getInt("Ingrese el ID del ripo de libro: \n", "Ingrese un valor entre 1 y 2\n", 1, MAX_TIPOS, 1, &bufferLibro.idTipo_FK)==0)
+					{
+						arrayLibro[bufferIndex].idTipo_FK=bufferLibro.idTipo_FK;
+						printf("Es: %d\n", arrayLibro[bufferIndex].idTipo_FK);
+					}
+					else
+					{
+						puts("Error\n");
+					}
+					break;
+				case 7:
+
+					break;
+				default:
+					puts("Ingrese una opcion valida.\n");
+					break;
+				}//final del switch
+				//}//fin del if del get
+			} while (atributoAModificar != 6);
+			retorno = 0;
+		}else{
+			// len mal definido
+			retorno = -2;
+			puts("retorno el -2");
+		}
+	}else{
+		//array nulo
+		retorno= -1;
+		puts("retorno el -1");
+	}
+
+	return retorno;
+}
+
+/// @fn int eLibro_SortByTitulo(eLibro[], int, int)
+/// @brief funcion para ordenar los libros por titulo
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @param orden si es orden ascendente o descendente
+/// @return -1 si no paas las validaciones, 1 si ordena ok, 0 error en criterio
+int eLibro_SortByTitulo(eLibro arrayLibro[], int len, int orden)
+{
+	int retorno = -1;
+	int i;
+	int j;
+	eLibro bufferlibro;
+
+	if (arrayLibro != NULL && len > 0) { //Si existe array y límite es válido
+		switch (orden) {
+		case -1:
+			for (i = 0; i < len - 1; i++)
+			{
+				for (j = i + 1; j < len; j++)
+				{
+					if (arrayLibro[i].isEmpty == OCUPADO // Verifico que ambos tengan estado "ocupado"
+							&& arrayLibro[j].isEmpty == OCUPADO)
+					{
+						if (strcmp(arrayLibro[i].titulo, arrayLibro[j].titulo) > 0) //Criterio de ordenamiento ASCENDENTE
+						{
+							bufferlibro = arrayLibro[i]; //Intercambio posiciones
+							arrayLibro[i] = arrayLibro[j];
+							arrayLibro[j] = bufferlibro;
+						}
+					}
+				}
+			}
+			retorno = 1;
+			break;
+		case 1:
+			for (i = 0; i < len - 1; i++)
+			{
+				for (j = i + 1; j < len; j++)
+				{
+					if (arrayLibro[i].isEmpty == OCUPADO // Verifico que ambos tengan estado "ocupado"
+							&& arrayLibro[j].isEmpty == OCUPADO)
+					{
+						if (strcmp(arrayLibro[i].titulo, arrayLibro[j].titulo) < 0) //Criterio de ordenamiento DESCENDENTE
+						{
+							bufferlibro = arrayLibro[i]; //Intercambio posiciones
+							arrayLibro[i] = arrayLibro[j];
+							arrayLibro[j] = bufferlibro;
+						}
+					}
+				}
+			}
+			retorno = 1;
+			break;
+		default:
+			retorno = 0;
+			puts("Error en criterio de ordenamiento");
+			break;
+		}
+	}
+	return retorno;
+}
+
+/// @fn int eLibro_SortByAutor_Titulo(eLibro[], int, int)
+/// @brief funcion para ordenar los libros por titulos y por autor
+///
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @param ordenAutor si es orden ascendente o descendente
+/// @return -1 si no pasa las validaciones, 1 si ordena ok, 0 error en criterio
+int eLibro_SortByAutor_Titulo(eLibro arrayLibro[], int len, int ordenAutor)
+{
+	int retorno = -1;
+	int i;
+	int j;
+	eLibro bufferlibro;
+
+	if (arrayLibro != NULL && len > 0)
+	{
+		switch (ordenAutor) {
+		case -1:
+			for (i = 0; i < len - 1; i++)
+			{
+				for (j = i + 1; j < len; j++)
+				{
+					if (arrayLibro[i].isEmpty == OCUPADO // Verifico que ambos tengan estado "ocupado"
+							&& arrayLibro[j].isEmpty == OCUPADO)
+					{
+						if (arrayLibro[i].idAutor_FK > arrayLibro[j].idAutor_FK ||
+								(arrayLibro[i].idAutor_FK == arrayLibro[j].idAutor_FK && strcmp(arrayLibro[i].titulo, arrayLibro[j].titulo) > 0)) //Criterio de ordenamiento ASCENDENTE
+						{
+							bufferlibro = arrayLibro[i]; //Intercambio posiciones
+							arrayLibro[i] = arrayLibro[j];
+							arrayLibro[j] = bufferlibro;
+						}
+					}
+				}
+			}
+			retorno = 1;
+			break;
+		case 1:
+			for (i = 0; i < len - 1; i++)
+			{
+				for (j = i + 1; j < len; j++)
+				{
+					if (arrayLibro[i].isEmpty == OCUPADO // Verifico que ambos tengan estado "ocupado"
+							&& arrayLibro[j].isEmpty == OCUPADO)
+					{
+						if (arrayLibro[i].idAutor_FK > arrayLibro[j].idAutor_FK ||
+								(arrayLibro[i].idAutor_FK == arrayLibro[j].idAutor_FK && strcmp(arrayLibro[i].titulo, arrayLibro[j].titulo) < 0)) //Criterio de ordenamiento DESCENDENTE
+						{
+							bufferlibro = arrayLibro[i]; //Intercambio posiciones
+							arrayLibro[i] = arrayLibro[j];
+							arrayLibro[j] = bufferlibro;
+						}
+					}
+				}
+				retorno = 1;
+				break;
+		default:
+			retorno = 0;
+			puts("Error en criterio de ordenamiento");
+			break;
+			}
+		}
+	}
+	return retorno;
+}
+
+
+//
+
+/// @fn int eAuxiliar_initArray(eAuxiliar[], eLibro[], int)
+/// @brief Inicializa el array auxiliar
+///
+/// @param arrayAux array a evaluar
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return -1 si no pasa las validaciones, - 2 error len, -3 error array null, 0 si inicializa ok
+int eAuxiliar_initArray(eAuxiliar arrayAux[], eLibro arrayLibro[], int len)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayAux != NULL)
+	{
+		if (len > 0)
+		{
+			retorno=0;
+			for (i = 0; i < len; ++i)
+			{
+				arrayAux[i].isEmpty = arrayLibro[i].isEmpty;
+				arrayAux[i].auxFecha = arrayLibro[i].fechaDePublicacion;
+				arrayAux[i].contador = LIBRE;
+				arrayAux[i].contadorNoSup = LIBRE;
+				arrayAux[i].contadorFecha = LIBRE;
+				arrayAux[i].acumulador = LIBRE;
+			}
+		}else{
+			retorno = -2;
+		}
+	}else{
+		retorno= -3;
+	}
+	return retorno;
+}
+
+/// @fn int eAuxiliar_Count(eAuxiliar[], eLibro[], int)
+/// @brief funcion para contar cantidad de libros
+///
+/// @param arrayAux array a evaluar
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return el contador de libros
+int eAuxiliar_Count(eAuxiliar arrayAux[], eLibro arrayLibro[], int len)
+{
+	int i;
+	int j;
+
+	for (i = 0; i < len; i++)
+	{
+		for(j = 0; j < len; j++)
+		{
+			if (arrayAux[i].isEmpty == OCUPADO && arrayLibro[j].isEmpty == OCUPADO)
+			{
+				if (arrayAux[i].isEmpty == arrayLibro[j].isEmpty)
+				{
+					arrayAux[i].contador++;
+				}
+			}
+		}
+	}
+	return arrayAux[i].contador;
+}
+
+/// @fn float eAuxiliar_Accum(eAuxiliar[], eLibro[], int)
+/// @brief funcion para acumular
+///
+/// @param arrayAux array a evaluar
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @return retorna el acumulador
+float eAuxiliar_Accum(eAuxiliar arrayAux[], eLibro arrayLibro[], int len)
+{
+	int i;
+	int j;
+
+	for (i = 0; i < len; i++)
+	{
+		for(j = 0; j < len; j++)
+		{
+			if (arrayAux[i].isEmpty == OCUPADO && arrayLibro[j].isEmpty == OCUPADO)
+			{
+				arrayAux[i].acumulador = arrayAux[i].acumulador + arrayLibro[j].importe;
+			}
+		}
+	}
+	return arrayAux[i].acumulador;
+}
+
+/// @fn int eAuxiliar_Dividir(float*, int, int)
+/// @brief realiza una operacion de divicion
+///
+/// @param pResultado puntero a evaluar
+/// @param operador1 variable
+/// @param operador2 variable
+/// @return retorno -1 si no pasa la validacion, 0 si divide ok
+int eAuxiliar_Dividir(float *pResultado, int operador1, int operador2)
+{
+	float resultado;
+	int retorno = -1;
+
+	if (pResultado != NULL && operador2 != 0)
+	{
+		resultado = (float) operador1 / operador2;
+		*pResultado = resultado;
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+/// @fn int eAuxiliar_CountNoSup(eAuxiliar[], eLibro[], int, float)
+/// @brief funcion para contar los que no superan el promedio
+///
+/// @param arrayAux array a evaluar
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @param promedio variable
+/// @return retorna el contador
+int eAuxiliar_CountNoSup(eAuxiliar arrayAux[], eLibro arrayLibro[], int len, float promedio)
+{
+	int i;
+	int j;
+
+	for (i = 0; i < len; i++)
+	{
+		for(j = 0; j < len; j++)
+		{
+			if (arrayAux[i].isEmpty == OCUPADO && arrayLibro[j].isEmpty == OCUPADO)
+			{
+				if ((arrayAux[i].isEmpty == arrayLibro[j].isEmpty) &&
+						(promedio > arrayLibro[j].importe) )
+				{
+					arrayAux[i].contadorNoSup++;
+				}
+			}
+		}
+	}
+	return arrayAux[i].contadorNoSup;
+}
+
+/// @fn int eAuxiliar_CountFecha(eAuxiliar[], eLibro[], int, int)
+/// @brief contador para fecha posterior
+///
+/// @param arrayAux array a evaluar
+/// @param arrayLibro array a evaluar
+/// @param len tamaño del array
+/// @param anio variable
+/// @return retorna el contador
+int eAuxiliar_CountFecha(eAuxiliar arrayAux[], eLibro arrayLibro[], int len, int anio)
+{
+	int i;
+	int j;
+
+	for (i = 0; i < len; i++)
+	{
+		for(j = 0; j < len; j++)
+		{
+			if (arrayAux[i].isEmpty == OCUPADO && arrayLibro[j].isEmpty == OCUPADO)
+			{
+				if ((arrayAux[i].isEmpty == arrayLibro[j].isEmpty) &&
+						(arrayLibro[j].fechaDePublicacion.anio > anio))
+				{
+					arrayAux[i].contadorFecha++;
+				}
+			}
+		}
+	}
+	return arrayAux[i].contadorFecha;
+}
+
+//
+
+void eTipo_printOne(eTipo tipo)
+{
+	printf("|%5d|%-20s|%5d\n",
+			tipo.idTipo, tipo.descripcionTipo, tipo.isEmpty);
+}
+
+int eTipo_printAll(eTipo arrayTipo[], int len, int state)
+{
+	int retorno = -1;
+	int i;
+
+	if (arrayTipo != NULL)
+	{
+		if (len > 0)
+		{
+			retorno = 0;
+			printf("%-6s", "|   ID");
+			printf("%-21s", "|DESCRIPCION");
+			printf("%-6s", "|ESTADO\n\n");
+			for (i = 0; i < len; ++i)
+			{
+				if (arrayTipo[i].isEmpty == state)
+				{
+					eTipo_printOne(arrayTipo[i]);
+				}
+			}
+			printf("\n");
+		}else{
+			retorno = -2; // es el error del len
+		}
+	}else{
+		retorno= -3; // error de que no es null
+	}
+	return retorno;
+}
+
+//
+
+/// @fn void MenuPrincipal()
+/// @brief menu principal del programa
+///
+void MenuPrincipal()
+{
+	puts("\t**********************");
+	puts("\t**  PRIMER PARCIAL  **");
+	puts("\t**********************");
+	puts("\t**  MENU PRINCIPAL  **");
+	puts("\t**********************");
+	puts("");
+	puts(" 1.ALTA\n");
+	puts(" 2.MODIFICACION\n");
+	puts(" 3.BAJA\n");
+	puts(" 4.INFORMAR");
+	MenuInformar();
+	puts(" 5.LISTADO");
+	MenuListado();
+	puts(" 6.SALIR\n");
+}
+
+/// @fn void MenuInformar()
+/// @brief sub menu de informacion
+///
+void MenuInformar()
+{
+	puts("   1.TOTAL Y PROMEDIO, LIBROS QUE LO SUPERAN");
+	puts("   2.CANTIDAD LIBROS POSTERIOR A 31/12/1999\n");
+}
+
+/// @fn void MenuListado()
+/// @brief sub menu de listado
+///
+void MenuListado()
+{
+	puts("   1.TODAS LAS EDITORIALES");
+	puts("   2.TODOS LOS PAISES");
+	puts("   3.TODOS LOS AUTORES");
+	puts("   4.TODOS LOS LIBROS");
+	puts("   5.LISTADO ORDENADO POR AUTOR Y TITULO");
+	puts("   6.TODOS LOS LIBROS POR ORDEN DE ID");
+	puts("   7.TIPOS DE LIBROS");
+	puts("   8.LIBROS DE TIPO PAPEL\n");
+}
+
+//
+
+static int genID(void)
+{
+	static int contadorAutoincremental = 100;
+
+	return contadorAutoincremental++;
+}

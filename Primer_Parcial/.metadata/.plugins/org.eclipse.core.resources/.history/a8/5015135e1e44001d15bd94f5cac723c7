@@ -1,0 +1,30 @@
+/*
+ * Auxiliar.h
+ *
+ *  Created on: 4 oct. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+#ifndef AUXILIAR_H_
+#define AUXILIAR_H_
+
+#include "Libro.h"
+
+typedef struct{
+	int contador;
+	int contadorNoSup;
+	int contadorFecha;
+	eFecha auxFecha;
+	float acumulador;
+	int isEmpty;
+}eAuxiliar;
+
+int eAuxiliar_initArray(eAuxiliar arrayAux[], eLibro arrayLibro[], int len);
+int eAuxiliar_Count(eAuxiliar arrayAux[], eLibro arrayLibro[], int len);
+float eAuxiliar_Accum(eAuxiliar arrayAux[], eLibro arrayLibro[], int len);
+int eAuxiliar_Dividir(float *pResultado, int operador1, int operador2);
+int eAuxiliar_CountNoSup(eAuxiliar arrayAux[], eLibro arrayLibro[], int len, float promedio);
+int eAuxiliar_CountFecha(eAuxiliar arrayAux[], eLibro arrayLibro[], int len, int anio);
+
+
+#endif /* AUXILIAR_H_ */

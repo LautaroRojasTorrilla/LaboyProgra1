@@ -1,0 +1,32 @@
+/*
+ ============================================================================
+ Name        : Archivo.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+	int dia;
+	int mes;
+	int anio;
+}eFecha;
+
+typedef struct{
+	char dni[9];
+	char apeNom[41];
+	eFecha fechaNacimiento;
+}ePersona;
+
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	return EXIT_SUCCESS;
+}

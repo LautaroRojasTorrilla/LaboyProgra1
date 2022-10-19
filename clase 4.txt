@@ -1,0 +1,68 @@
+Funciones
+
+Hay 3 cosas para tener en cuenta.
+
+° TENER CLARO QUÉ VA A REALIZAR LA FUNCIÓN
+° CUÁLES SON LOS PARÁMETROS O ARGUMETNOS QUE LA FUNCIÓN VA A RECIBIR
+° QUE RETORNA LA FUNCIÓN, PUEDE QUE SEA VOID.
+
+NO TIENE SENTIDO UNA FUNCIÓN QUE SE USE 1 SOLA VEZ.
+
+------
+
+RECURSIVIDAD
+
+Función que se llama así misma, es raro usarla pero existe. El lenguaje C lo soporte. El caso más común es el cálculo del factorial.
+
+La misma función se ocupa en el mismo espacio de memoria de manera junta, eso hace que se consuman muchos más recursos.
+
+------
+
+BIBLIOTECA
+
+Trabaja con funciones que están dentro. Para no tener que volver escribir el código y llamar a las funciones.
+
+funciones.c
+funciones.h
+
+scanf necesita enter
+getche no lo necesita, ingresás la letra directamente. Tampoco ncesita el fflush.
+
+#include "stdio.h"
+Si se pone entre comillas lo va a buscar en el main, si en main no lo encuentra, lo va a buscar en el directorio include.
+
+#include <stdio.h>
+Las bilbiotecas que son del lenguaje/compilador, van entre <>.
+
+./
+#include "./funciones.h"
+indica que es el directorio donde se encuentra main.
+
+
+#include "../misFunciones/funciones.h"
+Es para ir al directorio anterior.
+
+https://www.onlinegdb.com/oqCNpepRR9
+
+https://www.onlinegdb.com/aYE4mriXG
+
+------------------------
+
+Create header. funciones.h
+
+SIEMPRE VAN LOS PROTOTIPOS DE LAS FUNCIONES
+
+
+Create source funciones.c
+
+VA EL DESARROLLO DE LAS FUNCIONES.
+
+
+
+
+
+
+
+
+
+

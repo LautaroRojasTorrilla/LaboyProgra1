@@ -1,0 +1,8 @@
+02:38:41 **** Rebuild of configuration Debug for project ArraysDeEstructuras ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Empleado.o" "..\\src\\Empleado.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArraysDeEstructuras.o" "..\\src\\ArraysDeEstructuras.c" 
+gcc -o ArraysDeEstructuras.exe "src\\ArraysDeEstructuras.o" "src\\Empleado.o" 
+
+02:38:42 Build Finished. 0 errors, 0 warnings. (took 1s.563ms)
+

@@ -1,0 +1,39 @@
+/*
+ ============================================================================
+ Name        : Ejercicio 2.1
+ Author      : Rojas Torrilla Lautaro
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+/*
+ Ejercicio 2-2:
+	Ingresar 10 números enteros, distintos de cero. Mostrar:
+
+	Cantidad de pares e impares.
+	El menor número ingresado.
+	De los pares el mayor número ingresado.
+	Suma de los positivos.
+	Producto de los negativos.
+
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CANTIDAD 10
+
+int getInt(char *mensaje)
+{
+	int numero;
+
+	printf("%s", mensaje);
+	scanf("%d", &numero);
+
+	return numero;
+}
+
+int main(void) {
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}

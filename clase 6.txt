@@ -1,0 +1,25 @@
+Ordenamiento del vector.
+Se puede hacer de manera descendente o ascendente
+
+Algoritmo de la burbuja. Trabaja con un for anidado.
+
+Va iterando primero en i=0 y cambia los valores de j+1
+En la primera iteración del for de j se ordena el primer elemento
+
+Despues pasa a i=1 y así sigue iterando.
+
+En la segunda iteración del for de j se ejecuta
+
+-----
+
+https://www.onlinegdb.com/WXqtBVt00
+
+-----
+
+
+https://onlinegdb.com/lhzZcKuLD
+
+--------------
+
+
+https://onlinegdb.com/lhzZcKuLD

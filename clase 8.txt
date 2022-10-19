@@ -1,0 +1,97 @@
+strcpy y después concatenar
+
+---------------------------------------
+
+La validación tiene que ser lo más genérica posible. A veces valido que sea un número y no es necesarios los reintentos.
+
+
+scanf("%[^\n]", buffer); // expresión regular que dice que voy a guardar todos los caracteres que se ingresen menos el \n que es el enter, incluye los espacios.
+
+-------------------------------------------
+
+Arrays (vectores) paralelos
+
+SIGNIFICA QUE VAMOS A TENER LA MISMA CANTIDAD DE ELEMENTOS PARA CADA UNO DE LOS DATOS.
+EL ÍNDICE HACE A LA RELACION DE TODOS LOS DATOS.
+PARALELAMENTE CADA UNO DE LOS VECTORES A TRAVES DEL INDICE SE ENCUENTRA LA RELACION.
+
+https://onlinegdb.com/KlZ2w5UQY
+
+----------------------------------------------
+
+ESTRUCTURAS
+
+Permite crear mis propios tipos de datos. Que se le suman a los tipos de datos que se llaman nativos.
+
+Estructuras de datos:
+- Array: es una construcción de un tipo de dato nativo
+-- Vector
+-- Matriz
+
+struct nombre {
+	tipo variable_1;
+	tipo variable_2;
+	// ...
+	tipo variable_n;
+};
+
+
+struct eEmpleado {
+	int legajo;
+	float salario;
+	char sexo;
+	char nombre[31];
+	int estado;
+};
+
+Declaración:
+
+int dato;
+struct eEmpleado empleado;
+
+Acceder:
+empleado.legajo
+empleado.salario
+empleado.sexo
+empleado.nombre
+empleado.estado
+
+https://onlinegdb.com/84bHqTn15
+
+---------------------------------------
+
+https://onlinegdb.com/CfwYYOhvZ
+
+-----------------------------
+
+
+https://onlinegdb.com/c2u731912
+
+
+----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

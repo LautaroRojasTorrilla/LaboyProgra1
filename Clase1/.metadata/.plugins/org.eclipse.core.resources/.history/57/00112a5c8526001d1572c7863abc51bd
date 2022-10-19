@@ -1,0 +1,38 @@
+/*
+ ============================================================================
+ Name        : 4.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CANTIDAD 5
+
+char getChar(char *mensaje)
+{
+	char letra;
+
+	printf("%s", mensaje);
+	fflush(stdin);
+	scanf("%c", &letra);
+
+	return letra;
+}
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int letra;
+
+	for (int i = 0; i < CANTIDAD; ++i) {
+
+	}
+
+
+	return EXIT_SUCCESS;
+}

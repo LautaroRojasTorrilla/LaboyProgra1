@@ -1,0 +1,40 @@
+/*
+ ============================================================================
+ Name        : Ejercicio 2.3
+ Author      : Rojas Torrilla Lautaro
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int getInt(char *mensaje)
+{
+	int numero;
+
+	printf("%s", mensaje);
+	scanf("%d", &numero);
+
+	return numero;
+}
+
+int getChar(char *mensaje)
+{
+	char letra;
+
+	printf("%s", mensaje);
+	scanf("%c", &letra);
+
+	return letra;
+}
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,7 @@
+09:27:39 **** Incremental Build of configuration Debug for project Punteros Array ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Punteros Array.o" "..\\src\\Punteros Array.c" 
+gcc -o "Punteros Array.exe" "src\\Punteros Array.o" 
+
+09:27:42 Build Finished. 0 errors, 0 warnings. (took 3s.188ms)
+

@@ -1,0 +1,50 @@
+/*
+ ============================================================================
+ Name        : 1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+/*
+  Ingresar 5 números enteros calcular
+  y mostrar el promedio de los números.
+  Probar la aplicación con distintos valores.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CANTIDAD 5
+
+int getInt(char *mensaje)
+{
+	int numero;
+
+	printf("%s", mensaje);
+	scanf("%d", &numero);
+
+	return numero;
+}
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numeroIngresado;
+	int contador = 0;
+	int acumulador = 0;
+	int promedio;
+
+	for (int i = 0; i < CANTIDAD; ++i) {
+		numeroIngresado = getInt("\nFavor de ingresar un valor: ");
+		contador++;
+		acumulador = acumulador + numeroIngresado;
+	}
+
+	promedio = acumulador / contador;
+
+	printf("El promedio de las edad ingresadas es: %i", promedio);
+
+	return EXIT_SUCCESS;
+}

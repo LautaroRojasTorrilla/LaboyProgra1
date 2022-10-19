@@ -1,0 +1,38 @@
+/*
+ ============================================================================
+ Name        : Ejercicio 4.2
+ Author      : Rojas Torrilla Lautaros
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+#include "conversion.h"
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	float temperatura1;
+	float temperatura2;
+	float conversion1;
+	float conversion2;
+
+	temperatura1 = GetFloatValMaxMin("Favor de ingresar temperatura en °C", MINC , MAXC);
+	temperatura2 = GetFloatValMaxMin("Favor de ingresar temperatura en °F", MINF , MAXF);
+
+	printf("%f", temperatura1);
+	printf("%f", temperatura2);
+
+    conversion1 = ConvertirCaF(temperatura1);
+    conversion2 = ConvertirFaC(temperatura2);
+
+    printf("%f", conversion1);
+	printf("%f", conversion2);
+
+
+	return EXIT_SUCCESS;
+}

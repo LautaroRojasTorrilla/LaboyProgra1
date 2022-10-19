@@ -1,0 +1,137 @@
+descripcion
+entero
+flotante
+
+https://onlinegdb.com/EOGmO9t-f
+------------------------
+
+Los datos existen en un tiempo determinado y después dejan de existir.
+
+Porque se desapila, queda libre para que el SO lo utilice para hacer otra cosa.
+
+Cuando la función se termina de ejecutar, pierdo el scope. Por eso el espacio de memoria queda vació y apila cosas nuvas arriba.
+
+
+--------------------------
+
+MEMORIA DINÁMICA.
+
+Toda variable o vector, utiliza un espacio fijo. Lo compruebo con sizeof.
+
+Los lenguajes de alto nivel reservan memoria y liberan memoria.
+Existe la posibilidad de reservar y liberar memoria a nuestro antojo, según necesitemos.
+
+La memoria RAM que se asigna a un programa, no es solamente la pila. 
+
+
+Segmento de código: Se guarda el compilado, cuando tenga que hacer uns intrucción va a ese segmento y traa la instrucción del buff de datos y se procesa.
+LAS INSTRUCCIONES DEL LENGUAJE DE MAQUITA
+
+Memoría estática:
+Se guardan las variables globales. Afecta la modularización del programa. 
+Se pueden ver desde cualquuier lado porque están en este segmento de memoria, más general, más visible.
+
+Pila Stack:
+Se guardan las llamadas a funciones, parámetros y variables locales.
+
+Heap o Monton:
+Es un segmento en dónde se van a guardar las variables que fueron creadas dinámicamente en tiempo de ejecución.
+
+
+RESERVA DINAMICA DE MEMORIA
+stdlib.h
+
+void* malloc(unsigned int numBytes);
+
+Memory allocation = RESERVAR ESPACIO
+Actua sobre el HEAP, si se crea, existe en el HEAP.
+Devuelve un puntero, es decir una dirección de memoria.
+
+VOID  --> NADA
+VOID* --> TODO
+
+
+--------------------------
+
+POR QUE NO SE PUEDE REDIMENSIONAR VECTORES?
+
+Porque cuando lo creamos en el main, se crea en la pila. No se le puede dar más dimensión, porque no sabemos qué hay más arriba o qué hay más abajo.
+
+PARA QUE UN ARRAY SE COMPARTE DE MANERA DINAMICA...
+
+FUNCION REALLOC
+
+Sirve para reasignar espacio en memoria, que debe estar previamente asignada por malloc
+
+void* realloc(void* ptr, unsigned int numBytes);
+
+1)
+Si tiene espacio suficiente a continuacion, reserva y se pueden cargar con valores.
+
+2)
+Hay espacio pero no a continuación, lo copia y lo pega en el espacio de memoria y retorna la nueva dirección de memoria.
+El espacio anterior, lo deja libre para que se puede reutilizar, es un mcanismo que permite que se libere
+
+3)
+No hay espacio en memoria, no reasigna nada y devuelve NULL.
+
+----
+CALLOC RECIBE LA CANTIDAD Y EL TAMAÑO
+
+pVector = (int*) calloc(5, sizeof(int));
+INICIALIZA CON CERO.
+
+Lo uso por si necesito un array que sea acumulador o contador.
+
+ES LO MISMO QUE HACER
+
+vector[5] = {};
+
+----
+
+Si estamos en un main que está ejecutándose todo el tiempo, voy tomando recursos y nunca libero. Estoy reservando espacio en memoria que no uso para nada.
+
+Permite liberar espacio en memoria.
+En los lenguajes de alto nivel, existe un mecanismo asociado al lenguaje que se llama garbage collector.
+Lo que hace es ir a la memoria, si no hay nada que está apuntado ahí. Agarra y lo libera.
+
+void free(void* ptr);
+RECIBE CUALQUUIER COSA, un PUNTERO A VOID
+Y NO DEVUELVE NADA.
+
+
+No lo puedo hacer con el auxiliar porque el puntero apunta al mismo lado donde apunta el auxiliar, si hago el free libero la dirección de memoria a la que está apuntando.
+Por ende, los 2 se están liberando porque apuntan al mismo lugar.
+
+
+https://onlinegdb.com/nru03Ijo-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

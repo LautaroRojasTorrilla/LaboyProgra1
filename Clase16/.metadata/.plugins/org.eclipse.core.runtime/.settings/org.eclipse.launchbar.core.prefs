@@ -1,0 +1,10 @@
+LaunchTargetManager/configs/Ejercicio\ 17.1.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Memoria\ Dinamica.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Vector\ dinamico.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Ejercicio 17.1.exe,org.eclipse.launchbar.core.descriptorType.default\:Memoria Dinamica.exe,org.eclipse.launchbar.core.descriptorType.default\:Vector dinamico.exe
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Ejercicio\ 17.1.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Ejercicio\ 17.1.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

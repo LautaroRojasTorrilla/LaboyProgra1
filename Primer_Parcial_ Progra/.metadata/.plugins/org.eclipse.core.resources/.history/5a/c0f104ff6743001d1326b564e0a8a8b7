@@ -1,0 +1,19 @@
+/*
+ * Funcion.h
+ *
+ *  Created on: 3 oct. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+#ifndef FUNCION_H_
+#define FUNCION_H_
+#include <stdio.h>
+#include <stdlib.h>
+#include "Input.h"
+
+
+float FuncionCalculoDescuento(float importe, int porcentaje);
+float Multiplicacion(float factor1, float factor2);
+float Dividir(float dividendo, float divisor);
+
+#endif /* FUNCION_H_ */

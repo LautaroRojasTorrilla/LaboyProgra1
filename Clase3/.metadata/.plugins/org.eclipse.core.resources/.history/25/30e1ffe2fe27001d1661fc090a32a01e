@@ -1,0 +1,32 @@
+/*
+ ============================================================================
+ Name        : 5.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void sumar1(void);
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	return EXIT_SUCCESS;
+}
+
+void sumar1(void)
+{
+	int numero1;
+	int numer2;
+
+	printf("Ingrese un numero: ");
+	scanf("%d",&numero1);
+	printf("Ingrese otr numero: ");
+	scanf("%d",&numero2);
+
+}

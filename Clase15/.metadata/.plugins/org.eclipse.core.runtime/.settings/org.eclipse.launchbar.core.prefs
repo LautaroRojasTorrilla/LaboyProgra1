@@ -1,0 +1,15 @@
+LaunchTargetManager/configs/Ejercicio\ 15.5.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Ejercicio\ Punteros.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Puntero\ Estructura.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Punteros\ Array.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Punteros.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Punteros_Sabado.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Ejercicio Punteros.exe,org.eclipse.launchbar.core.descriptorType.default\:Puntero Estructura.exe,org.eclipse.launchbar.core.descriptorType.default\:Punteros Array.exe,org.eclipse.launchbar.core.descriptorType.default\:Punteros.exe,org.eclipse.launchbar.core.descriptorType.default\:Punteros_Sabado.exe,org.eclipse.launchbar.core.descriptorType.default\:Ejercicio 15.5.exe
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Ejercicio\ Punteros.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Ejercicio\ Punteros.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Punteros.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Punteros.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

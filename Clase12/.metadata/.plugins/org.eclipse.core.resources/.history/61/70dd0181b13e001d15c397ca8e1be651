@@ -1,0 +1,47 @@
+/*
+ ============================================================================
+ Name        : Estructuras.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+	int dia;
+	int mes;
+	int anio;
+}eFecha;
+
+typedef struct{
+	char ApeNom[51];
+	char dni[9];//porque no se le hace ningun calculo aritmetico o matematico
+	eFecha fechaNac;
+	char sexo;
+
+}ePersona;
+
+typedef struct{
+	int id;
+	char descripcion[31];
+}ePais;
+
+typedef struct{
+	int id;
+	char descripcion[31];
+}eProvincia;
+
+typedef struct{
+	int id;
+	char descripcion[31];
+}eLocalidad;
+
+
+int main(void) {
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}

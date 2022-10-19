@@ -1,0 +1,55 @@
+/*
+ ============================================================================
+ Name        : ejemplo.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	FILE *parch;
+
+	//Se abre en modo lectura
+	if((parch=fopen("banco.dat","rb"))==NULL)
+	{
+		printf("\nEl archivo no puede ser abierto");
+	}
+
+	if((fclose(parch))==-1) //Se cierra el archivo
+	{
+		printf("\nNo se pudo cerrar el archivo");
+	}
+	else
+	{
+		printf("\nEl archivo se cerro exitosamente");
+	}
+
+	return EXIT_SUCCESS;
+}
+
+/*
+ 	FILE *pArch;
+
+	pArch = fopen("banco.dat", "rb"); //generalmente los binarios son .dat o .bin
+
+	if(pArch == NULL)
+	{
+		printf("\nEl archivo no puede ser abierto");
+	}
+	else
+	{
+		// tiene que estar dentro del proyecto, no en src.
+		printf("\nEl archivo se abrio correctamente");
+	}
+
+	//se cierra cuando termina el programa.
+	fclose(pArch);
+
+ */

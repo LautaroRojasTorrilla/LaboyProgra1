@@ -1,0 +1,64 @@
+VECTOR
+Es un conjunto de elementos del mismo tipo que ocupan dirreciones de memoria consecutivas.
+Representa una dirección de memoria en sí.
+
+
+int lista[5];
+
+lista[5] = {5,8,6,3,1}; //cargar el vector por extensión.
+
+Entre [] la cantidad de elementos que tiene el vector
+
+subíndice: A través del número que acompaña al vector voy a poder identificar la posición
+
+Si recorro un vector por más cantidaddes de los elementos, estaría haciendo un desbordamiento.
+Estos accediendo a direcciones que no son parte del vector, están por fuera.
+
+-----------
+
+Cargue 5 números, que muestre la sumatoria, el promedio y la lista de números.
+
+Calcular cuántos números positivos se ingresaron. 
+En otro FOR.
+
+-----------
+
+El #define no es una constante.
+
+La constante la pongo en el main. La constante ocupa un lugar en memoria
+
+const int TAM = 3;
+
+Cada vez que se use ese valor, el procesador está yendo a memoria. La unidad de control se encarga de ir a buscarlo. Es tiempo de procesamiento, que pierde el procesador haciendo cosas.
+
+
+El proceso de compilación, implica que antes de que se compile todo el programa, se incluyan los archivos de cabecera.
+El #define es una especial de ctrl + f. Buscar y reemplazar.
+Buscar cualquier referencia que tengo en el código y lo reemplaza por 4. SIEMPRE ANTES DE QUE COMPILE, después LO COMPILA.
+No ocupa especio de memoria porque no se compiló aún, al no estar en tiempo de ejecución es más rápido el proceso.
+
+----------
+
+Los vectores no se pasan por valor, porque los vectores representan una dirección de memoria.
+TODO LO QUE REPRESENTA DIRECCIÓN DE MEMORIA, SE PASA POR REFERENCIA.
+
+-----------
+
+void CargarVectorEnteros(int numeros[], int tam);
+
+Los corchetes es la versión disney de los puntos.
+A la función le tenog que decir cuántos elementos tiene el vector.
+
+CargarVectorEnteros(lista, LEN);
+
+
+
+ 
+
+
+
+
+
+
+
+

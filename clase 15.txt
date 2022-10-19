@@ -1,0 +1,49 @@
+PUNTEROS
+
+Problema que teniamos era el pasaje de los valores en las funciones
+Otro es que teníamos un límite cuando cargábamos usuarios.
+
+ES UNA VARIABLE QUE CONTIENE UNA DIRECCION DE MEMORIA.
+
+tipo* pVariable;
+
+Los punteros necesitan operadores para ser usados.
+
+& me da la dirección de memoria.
+* es el operador de indirección, permite acceder al valor de la variable que está apuntando el puntero.
+
+
+---
+
+Los array son punteros indexados.
+
+arraynumero, recibe la dirección de memoria del primer elemento.
+
+https://onlinegdb.com/VwadNg3Z8 
+https://www.onlinegdb.com/lteh9Npy_
+
+https://www.onlinegdb.com/d27vrX1mN
+
+---------------------------------
+
+
+LOS ARRAYS DE PUNTEROS HAY QUE INICIALIZARLOS
+SE INICIALIZAN EN NULL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

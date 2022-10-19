@@ -1,0 +1,32 @@
+/*
+ ============================================================================
+ Name        : Punteros.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	int numero;
+	int* pNumero;
+
+	pNumero = &numero;
+
+	//le asigno 10 a mi variable numero
+	numero = 10;
+
+	//Hay que tener cuidado, se trabaja sobre direcciones de memoria
+	//NO OLVIDAR EL *
+	*pNumero = 25;
+
+	printf("%d\n", *pNumero);
+
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,21 @@
+/*
+ * Auxiliar.h
+ *
+ *  Created on: 4 oct. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+#ifndef AUXILIAR_H_
+#define AUXILIAR_H_
+
+typedef struct{
+	int contador;
+	int contadorNoSup;
+	int contadorFecha;
+	eFecha auxFecha;
+	float acumulador;
+	int isEmpty;
+}eAuxiliar;
+
+
+#endif /* AUXILIAR_H_ */

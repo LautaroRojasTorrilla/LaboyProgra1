@@ -1,0 +1,108 @@
+/*
+ ============================================================================
+ Name        : Ejercicio 2.1
+ Author      : Rojas Torrilla Lautaro
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+/*
+ Ejercicio 2-2:
+	Ingresar 10 números enteros, distintos de cero. Mostrar:
+
+	Cantidad de pares e impares.
+	El menor número ingresado.
+	De los pares el mayor número ingresado.
+	Suma de los positivos.
+	Producto de los negativos.
+
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CANTIDAD 10
+
+int getIntNoCero(char *mensaje, int reintentos, char *mensajeError)
+{
+	int buffer;
+	int numero;
+
+	printf("%s", mensaje);
+	scanf("%d", &buffer);
+
+	do{
+		if(buffer == 0){
+			printf("%s", mensajeError);
+			scanf("%d", &buffer);
+			reintentos--;
+		}else{
+			reintentos = 0;
+			numero = buffer;
+		}
+	}while(reintentos>0);
+
+	return numero;
+}
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numeroIngresado;
+	int contadorpar = 0;
+	int contadorimpar = 0;
+	int acumuladorPositivos = 0;
+	int flag = 0;
+	int minIngresado;
+	int maxParIngresado;
+
+	for (int i = 0; i < CANTIDAD; ++i) {
+		numeroIngresado = getIntNoCero("\nFavor de ingresar un valor: ", 5,
+				"\nFavor de ingresar un valor distinto a cero: ");
+
+		//b.El menor número ingresado.
+		if(flag == 0){
+			minIngresado = numeroIngresado;
+			flag = 1;
+		}else{
+			if(numeroIngresado < minIngresado){
+				minIngresado = numeroIngresado;
+			}
+		}
+
+		// a. Cantidad de pares e impares.
+		if(numeroIngresado % 2 == 0){
+			contadorpar++;
+			//c. De los pares el mayor número ingresado.
+			if(flag == 0){
+				maxParIngresado = numeroIngresado;
+				flag = 1;
+			}else{
+				if(numeroIngresado > maxParIngresado){
+					maxParIngresado = numeroIngresado;
+				}
+			}
+		}
+		else{
+			contadorimpar++;
+		}
+
+		//d . Suma de los positivos.
+		if(numeroIngresado > 0){
+			acumuladorPositivos += numeroIngresado;
+		}
+
+
+	}// fin del for
+
+	//a. Cantidad de pares e impares.
+	printf("\nLa cantidad de numeros pares es: %d", contadorpar);
+	printf("\nLa cantidad de numeros impares es: %d", contadorimpar);
+	//b.El menor número ingresado.
+	printf("\nEl menor número ingresado es: %d", minIngresado);
+	//c. De los pares el mayor número ingresado.
+	printf("\nEl mayor número par ingresado es: %d", maxParIngresado);
+
+
+	return EXIT_SUCCESS;
+}

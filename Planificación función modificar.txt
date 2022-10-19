@@ -1,0 +1,71 @@
+1) MUESTRO TODOS LOS DATOS
+
+2) Ingresa un ID válido
+
+3) ver que el ID existe, hacer una función que busque por ID
+Recorre la lista y comparar, 10 es igual a 1, es igual a 2. Hasta que encuentre
+Si no es válido avisarle al usuario.
+
+También validar que el estado sea dado de alta.
+MI BUSQUEDA POR ID tiene que validar que el el ID exista y que le ESTADO ESTE DADO DE ALTA.
+
+LA FUNCION TIENE QUE BUSCAR POR ID y retornarme el índice
+Otra función que sea empty y que una llame a la otra.
+
+4) Ahora que tengo el índice.
+Le pregunto si está seguro que es ese y le muestro ese ID. CON UN IF
+
+
+5)MUESTRO NUEVAMENTE Y LE PREGUNTO QUE QUIERE CAMBIAR
+
+5) SWITCH con cada caso.
+
+6) Puedo guardar todo en un auxiliar, sí dice que sí lo asigno a la estructura. 
+3 volver al menu principal.
+
+
+
+--------------------------------------------
+
+	if(utn_getStringAndNum("Ingrese Descripción:\n", "Error, debe ingresar algo válido.\n", 1, MAX_CODE, bufferP.descripcion)==0)
+	{
+		strncpy(p.descripcion, bufferP.descripcion, sizeof(p.descripcion));
+		printf("Ingresaste: %s\n", p.descripcion);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	if(utn_getInt("10. EEUU.\n11. CHINA\n12. OTRO.\n\nIngrese Nacionalidad:", "Ingrese un valor entre 10 y 12\n", EEUU, OTRO, 1, &bufferP.nacionalidad)==0)
+	{
+		p.nacionalidad=bufferP.nacionalidad;
+		printf("Es: %d\n", p.nacionalidad);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+	if(utn_getInt("100. IPHONE.\n101. MAC\n102. IPAD.\n103. ACCESORIOS.\n\nIngrese Tipo:", "Ingrese un valor entre 101 y 103\n", IPHONE, ACCESORIOS, 2, &bufferP.tipo)==0)
+	{
+		p.tipo=bufferP.tipo;
+		printf("Es: %d\n", p.tipo);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+
+	if(utn_getFloat("Ingrese el Precio:\n", "Error. debe ingresar un valor entre 1 y 150000\n", 0, MAX_PRICE, 2, &bufferP.precio)==0)
+	{
+		p.precio=bufferP.precio;
+		printf("Es: %.2f\n", p.precio);
+	}
+	else
+	{
+		puts("Error\n");
+	}
+
+

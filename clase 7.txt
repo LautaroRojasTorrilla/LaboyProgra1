@@ -1,0 +1,117 @@
+TP
+
+Documentación la hacemos en el H. Para poner el doxygem.
+
+----------------------------
+
+Array 
+para trabajar con cadenas de textos.
+
+Las declaraciones son como vectores, se puede asignar una cadena de texto.
+
+char cadena[10] = "hola";
+
+El último espacio almacena un \0, al declararlo hay que guardarle un espacio.
+
+
+Cómo se manipulan las cadenas?
+Hay funciones que permiten hacerlo
+
+scanf("%s", cadena)
+SIN USAR EL &
+
+gets(cadena)
+SOLAMENTE PARA CADENA DE CARACTERES
+
+strcmp(cadena1, cadena2)
+Compara 2 cadenas de caracteres y devuelve un número entero.
+Sirve para el ordenamiento, si sos mayor o menor que tal, realice el swap.
+Hace un resta char a char.
+(alberto-mariano)
+a - m =
+l - a =
+b - r =
+
+
+
+strcpy(cadena1, cadena2);
+Se copia el contenido de la segunda variable pasa como parámetro en la variable pasada como primer parámetro.
+strcpy(cadenaDestino, cadenaOrigen);
+
+strcat(cadena1, cadena2);
+es para concatener 2 cadenas de caracteres
+
+strlen(cadena);
+Es para saber la cantidad de letras que tiene una cadena de caracteres.
+
+
+
+FGETS
+Se encarga de leer una sola línea de texto. Cuando termina la línea deja preparado el puntero para leer la linea siguiente. Cuando pasa de línea en línea lee el \n.
+
+
+
+
+len = strlen(cadena);
+
+cadena[len-1] = '\0';
+
+len = strlen(cadena);
+
+Sirve para validar el largo de una cadena.
+
+------------------------
+
+<string.h>
+strlen
+strcpy
+strcmp
+stricmp
+strcat
+strupr
+strlwr
+
+<stdio.h>
+printf
+scanf
+gets
+fgets
+puts
+sprintf
+
+<ctype.h>// cosas con 1 caracter
+tolower
+toupper
+isdigit
+isalpha
+isspace
+
+<stdlib.h>
+atoi //de cadena  entero
+atof //de cadena a float
+
+---
+https://onlinegdb.com/2o6sonZbp
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

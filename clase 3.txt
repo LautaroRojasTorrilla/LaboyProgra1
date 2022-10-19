@@ -1,0 +1,57 @@
+fflush(stdin);
+
+Es porque presioné el enter y queda almacenado en el buffer
+
+---
+FUNCIONES
+
+Se usa para que el código no sea repetitivo.
+Para quese puedan reutilizar.
+
+° Reutilización
+° Independencia del código. Si tenemos un error en "suma", va a estar aaparte del main. Se busca el error en esa función específica.
+° Depuración -> para saber dónde está el error.
+° Tienen que cumplir una tarea específica.
+
+---
+
+VARIABLES GLOBALES --> Es una mala práctica usarlas.
+
+Cuando existe varible global y local con el mismo nombre, tiene validez la VARIABLE LOCAL.
+
+El compilador busca si está definida primero como local y después como global.
+
+---
+
+https://www.onlinegdb.com/K2Y4XSWXB
+
+---------------------------
+
+PUNTEROS
+
+VOID y VOID 
+Nunca se deben hacer esas funciones, es lo mismo que si lo tuviera en el main.
+
+https://discord.gg/ndd4uvxQ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

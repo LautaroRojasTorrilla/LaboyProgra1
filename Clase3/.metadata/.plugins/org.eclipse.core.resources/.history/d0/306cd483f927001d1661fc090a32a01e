@@ -1,0 +1,29 @@
+/*
+ ============================================================================
+ Name        : 1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float getFloat(char *mensaje);
+
+int main(void) {
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}
+
+float getFloat(char *mensaje)
+{
+	float numero;
+
+	printf("%s", mensaje);
+	scanf("%f", &numero);
+
+	return numero;
+}

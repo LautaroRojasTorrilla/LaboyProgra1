@@ -1,0 +1,30 @@
+/*
+ ============================================================================
+ Name        : Puntero.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+char nombre[20];
+int nota;
+}eAlumno;
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	eAlumno alumno;
+	eAlumno* puntero;
+
+	int peso = sizeof(alumno);
+
+	printf("%d\n", peso);
+
+	return EXIT_SUCCESS;
+}

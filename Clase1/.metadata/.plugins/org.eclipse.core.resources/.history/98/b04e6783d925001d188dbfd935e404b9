@@ -1,0 +1,73 @@
+/*
+ ============================================================================
+ Name        : Ejercicio 2.3
+ Author      : Rojas Torrilla Lautaro
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define PRECIO 600
+
+int getInt(char *mensaje)
+{
+	int numero;
+
+	printf("%s", mensaje);
+	scanf("%d", &numero);
+
+	return numero;
+}
+
+int getFloat(char *mensaje)
+{
+	float numero;
+
+	printf("%s", mensaje);
+	scanf("%f", &numero);
+
+	return numero;
+}
+
+int getChar(char *mensaje)
+{
+	char letra;
+
+	printf("%s", mensaje);
+	scanf("%c", &letra);
+
+	return letra;
+}
+
+int menuContinuar(char* mensaje)
+{
+	int seleccion;
+
+	printf("%s", mensaje);
+	printf("\n1. Sí\n2. No\n");
+	fflush(stdin);
+	scanf("%d", &seleccion);
+
+	return seleccion;
+}
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numeroDeCliente;
+	char estadoCivil;
+	int edad;
+	float temperaturaCorporal;
+	char genero;
+
+	do {
+		puts("funciona");
+	} while (menuContinuar("\nDesea ingresar otro pasajero?") == 1);
+
+
+	return EXIT_SUCCESS;
+}

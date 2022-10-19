@@ -1,0 +1,23 @@
+LA ENTIDAD PPAL ES LIBRO
+
+EL LIBRO VA A TENE RUN AUTOR, VA A TENER UNA EDITORIAL
+
+DEBERA ESTAR LA ESTRUCUTRA FECHA
+
+PREGUNTAR POR ID INCREMENTAL.
+
+SIEMPRE VER QUE ES 1 Y QUE ES MUCHOS.
+
+AUTOR EDITORIAL Y PAIS PUEDO HARDCODEAR.
+
+---------------------------------
+
+1) ALTA ALEATORIA, donde di de alta BREAK; vuelvo al menu.
+
+5 editoriales
+5 paises
+10 autores por lo menos.
+PARA LIBROS ARRAY DE 100
+------------------------------------------
+
+PREGUNTAR POR ID AUTOINCREMENTAL.

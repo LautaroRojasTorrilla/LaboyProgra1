@@ -1,0 +1,19 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 30 ago. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+int ValidacionMaxMin(char *mensaje, int minimo, int maximo)
+{
+	int numero;
+
+	do{
+		printf("%s", mensaje);
+		scanf("%d", &numero);
+	}
+	while(numero > maximo || numero < minimo || minimo > maximo);
+
+	return numero;
+}

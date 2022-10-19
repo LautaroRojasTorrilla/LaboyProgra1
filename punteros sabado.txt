@@ -1,0 +1,9 @@
+Un PUNTERO ES UNA VARIABLE, que en vez de guardar un valor.
+VA A GUARDAR UNA REFERENCIA, ES DECIR UNA DIRECCION DE MEMORIA.
+
+* operador de indireccion, permite traer el valor al que apunta el puntero.
+
+NULL es un concepto, es una no dirección de memoria, es decir una dirección de memoria que no existe.
+
+
+https://onlinegdb.com/RL4JzuIOV

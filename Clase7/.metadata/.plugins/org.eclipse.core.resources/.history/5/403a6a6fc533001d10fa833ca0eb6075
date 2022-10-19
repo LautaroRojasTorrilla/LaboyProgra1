@@ -1,0 +1,63 @@
+/*
+ ============================================================================
+ Name        : Estructuras.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CANTIDAD 3
+#define LIBRE 0
+#define OCUPADO 1
+
+typedef struct{
+	int legajo;
+	float salario;
+	char sexo;
+	char nombre[31];
+	int estado;
+}eEmpleado;
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	eEmpleado empleado;
+	eEmpleado empleados[CANTIDAD];
+	int i;
+
+	printf("Legajo: ");
+	scanf("%d", &empleado.legajo);
+
+	printf("Nombre: ");
+	fflush(stdin);
+	scanf("%[^\n]", empleado.nombre);
+
+	printf("Sexo: ");
+	fflush(stdin);
+	scanf("%c", &empleado.sexo);
+
+	printf("Salario: ");
+	scanf("%f", &empleado.salario);
+
+	empleado.estado = OCUPADO;
+
+
+	printf("Imprimo los datos de un %cnico empleado", 163);
+
+	printf("Legajo\tNombre\t\tSexo\tSalario\n\n");
+
+	printf("%d\t%s\t\t%c\t%.2f\n\n", empleado.legajo, empleado.nombre, empleado.sexo, empleado.salario);
+
+	for(i=0; i<80; i++){
+		printf("-")
+	}
+
+
+
+	return EXIT_SUCCESS;
+}

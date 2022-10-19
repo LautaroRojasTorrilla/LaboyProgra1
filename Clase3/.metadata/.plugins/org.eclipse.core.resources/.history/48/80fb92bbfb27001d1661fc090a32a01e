@@ -1,0 +1,39 @@
+/*
+ ============================================================================
+ Name        : 1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float getFloat(char *mensaje);
+void imprimirFloat (float *numero);
+
+int main(void) {
+	float flotante = 1.25;
+	void imprimir;
+
+	imprimir = imprimirFloat(flotante);
+
+	return EXIT_SUCCESS;
+}
+
+float getFloat(char *mensaje)
+{
+	float numero;
+
+	printf("%s", mensaje);
+	scanf("%f", &numero);
+
+	return numero;
+}
+
+void imprimirFloat (float *numero)
+{
+	printf("El número flotante es: \f", numero);
+}

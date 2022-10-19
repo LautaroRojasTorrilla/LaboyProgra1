@@ -1,0 +1,5 @@
+21:33:02 **** Incremental Build of configuration Debug for project Escribir archivo ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Escribir archivo.o" "..\\src\\Escribir archivo.c" 
+gcc -o "Escribir archivo.exe" "src\\Escribir archivo.o" 
+Info: Nothing to build for Escribir archivo

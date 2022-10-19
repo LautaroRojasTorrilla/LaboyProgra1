@@ -1,0 +1,161 @@
+ARCHIVO.
+
+Implica que vamos a poder persistir los datos, vamos a poder mantener los datos aunque el programa se cierre y aunque se apague la computadora.
+
+Se necesita entender el concepto de punteros, un archivo es un puntero a una estructura del tipo FILE.
+
+2 tipos de archivos.
+
+TEXTO: 
+Contiene toda su información guardad en binario pero se interpreta como texto. TODO LO QUE SE GUARDA EN UNA PC SE GUARDA EN BINARIO.
+
+El contenido es texto, inclusive los números.
+
+BINARIOS:
+Se guardan datos con distintos formatos. Los caracteres se guardan de manera similar a texto. Los números se guardan en binario.
+
+el texto sigue siendo texto y lo numérico es numérico y no texto
+
+---
+
+SE TRABAJA CON BUFFERS, HASTA QUE SE DECIDA PASAR AL ARCHIVO.
+Cualquier operación lectura o escritura será sobre el buffer.
+
+frprinft, hace lo mismo que sprintf pero en vez de escribir en una variable, lo hace en un archivo.
+
+fscanf, lee desde nu archivo a la variable y no desde el teclado.
+
+*fopen
+Lo que hace es abrir el archivo.
+
+fclose / fcloseall
+Cierra el archivo
+
+fread
+Leemos un archivo binario
+
+fwrite
+Escribimos en un archivo binario
+
+feof
+file end of file
+Recorremos un archivo
+Permite recorrer la secuencia y los datos los guarda en variables en el programa.
+Permite controlar que llegué o no llegué al final del archivo.
+Cuando llega al final devuelve 1.
+
+ferror
+Error de archivo
+
+rewind
+Permite rebovinar un archivo, llevar el apuntador al comienzo
+
+fseek
+Me permite moverme en el archivo, para buscar un dato en particular o agregar datos. Al comienzo, al final o alguna parte
+
+
+
+ftell
+Da la cantidad en bytes de lo que ocupa el archivo.
+
+getc
+Obtengo datos desde archivo
+
+putc
+colocar datos en un archivo
+
+fgets
+
+fputs
+es como puts con archivo.
+
+fscanf
+fprintf
+Se usa con archivos de textos estas últimas 2.
+
+---
+
+APERTURA DE ARCHIVO
+
+FILE * fopen (const char *Nombre_de_archivo , const char *Modo)
+
+Nombre_de_archivo: Es una cadena de caracteres que representa el archivo , es decir se
+pone la ruta y el nombre del archivo
+
+Modo: determina el modo en que sera abierto
+
+
+Modo escritura (w): Si se abre un archivo para operaciones de escritura (w ,wb ,w+b ,w+) y
+el archivo no existe se creará , pero si existe todos los datos del archivo serán borrados.
+El indicador de posición se encuentra en el comienzo del archivo
+
+
+Modo lectura ( r ): nunca borra el archivo existente y creará uno nuevo.
+
+ABRIRLO EN MODO R, si no existe me va a dar error. Devuelve NULL porque es un puntero a una dirección de memoria.
+
+
+Modo append ( a ): Si se abre un archivo para agregar datos ( a , ab , a+b , a+ ) y el
+archivo no existe se creará, caso contrario el indicador de posición del archivo queda
+posicionado al final del mismo de forma de poder agregar datos.
+Cada vez que se agregan datos se hace al final del archivo.
+
+
+Se pueden abrir varios archivos al mismo tiempo, siempre que haya un puntero a file para cada uno. La cantidadd de archivos que se pueden abrir al mismo tiempo dependen del sistema operativo.
+
+---
+
+ES IMPORTANTE PONER EL NOMBRE DEL ARCHIVO COMO UNA VARIABLE, QUE NO ESTE HARDCODEADO
+
+
+---
+
+Existe una función llamada fcloseall que cierra todos los archivos que se encuentran abiertos.
+El formato de la función es
+int fcloseall ( void );
+
+
+---
+
+Escritura de un archivo
+
+int fwrite ( void * origen , size_t tamaño , size_t cantidad , FILE *arch);
+
+• origen: Es un puntero al lugar desde donde se obtienen los datos para escribir en el
+archivo
+• tamaño: Es el tamaño en bytes del dato que se va a escribir
+• cantidad: Es la cantidad de datos de longitud tamaño que se van a escribir
+• arch: Es el puntero a FILE asociado al archivo
+Nota: size_t es un unsigned int definido en stdio.h
+
+Valor retornado: Devuelve el número de datos escritos (cantidad). Si el valor retornado es
+menor al que se indicó por medio de la variable cantidad , significa que hubo un error en la
+escritura.
+
+
+
+-----------------
+
+https://www.onlinegdb.com/cDyUd_IZj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

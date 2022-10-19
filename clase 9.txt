@@ -1,0 +1,18 @@
+Cada elemento de la struct se llama atributo o campo
+
+"%4d deternmina la justificación del dato dentro del mensaje, a la derecha puedo escribir 4 dígitos.
+
+--------------------------------
+
+SI TENGO UNA FUNCION QUE RECIBE UNA CADENA, NO TENOG QUE PASARLE EL TAM, PORQUE TIENE STRLEN
+--------------------------------
+
+Array de estructuras.
+
+Cada elemento del vector tiene un aniadamiento.
+
+https://www.onlinegdb.com/uNMIwC3Z1
+-------------------------
+
+ABM 
+

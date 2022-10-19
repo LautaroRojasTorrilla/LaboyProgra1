@@ -1,0 +1,37 @@
+/*
+ ============================================================================
+ Name        : Cadenas.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	char cadena[200];
+	int len;
+
+	printf("Ingrese texto: ");
+
+	//scanf("%s", cadena);
+
+	//gets(cadena); // preparada para trabjar con cad. de caracteres tomadas del buffer de entr.
+	//fgets(cadena, 200, stdin); // trabaja con archivos. F de FILE, lee cadenas desde un archivo
+	//desde donde, hacia dónde y cuántos caracteres.
+
+	scanf("%[^\n]", cadena);
+
+	len = strlen(cadena);
+
+	printf("Ud ingresó: %s\n", cadena);
+	puts(cadena);
+
+	return EXIT_SUCCESS;
+}

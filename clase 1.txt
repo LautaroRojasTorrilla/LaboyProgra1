@@ -1,0 +1,69 @@
+FOR
+
+lo voy a utilizar cuando sepa cuántas veces tengo que iterar. SIEMPRE QUE SEPA ESO, CONVIENE USAR EL FOR.
+
+EN C el 0 es FALSO
+SI NO ESTÁ SIEMPRE ENTRA
+
+break;
+ROMPE EL CICLO.
+
+getc(stdin);
+TOMA LO QUE PONES EN EL TECLADO
+
+while (getc(stdin)!='\x1B');
+HACE QUE CON SCAPE SALGA DE LA ITERACIÓN.
+
+\'valor \'
+
+Es para que se respete la comilla simple como un valor literal.
+----------------------
+
+
+#define CANTIDAD 3
+
+int main(){
+	int promedio, i, contador = 0, acumulador = 0, edad;
+	
+	for(i = 0; i < CANTIDAD; i++){
+		printf("Edad: ");
+		scanf("%i", &edad);
+		acumulador = acumulador + edad;	
+		contador = contador + 1;
+	}
+
+	promedio = acumulador / contador;
+
+	print("El promedio de las edad ingresadas es: %i", promedio);
+
+	return 0;
+}
+
+MAX Y MIN
+
+int main(){
+	int edad, max, min;
+
+	for(i = 0; i<CANTIDAD; i++){
+	printf("Edad: ");
+	scanf("%i", &edad);
+	
+	if(i == 0 || edad > max)
+	
+	
+	}
+	
+
+	return 0;
+}
+
+
+---------------------------------
+
+
+
+
+
+
+
+

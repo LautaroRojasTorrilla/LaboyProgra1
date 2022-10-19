@@ -1,0 +1,110 @@
+/*
+ * Libro.h
+ *
+ *  Created on: 28 sep. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include "Input.h"
+
+#define LIBRE 0
+#define OCUPADO 1
+#define BAJA -1
+
+#define MAX_CHAR 51
+#define MAX_EDPAIS 5
+#define MAX_AUTOR 10
+#define MAX_LIBROS 10
+#define MAX_PRICE 10000
+
+typedef struct{
+	int dia;
+	int mes;
+	int anio;
+	int isEmpty;
+}eFecha;
+
+typedef struct{
+	int idPais;
+	char descripcionPais[MAX_CHAR];
+	int isEmpty;
+}ePais;
+
+typedef struct{
+	int idEditorial;
+	char descripcionEditorial[MAX_CHAR];
+	int isEmpty;
+}eEditorial;
+
+typedef struct{
+	int idAutor;
+	char nombreAutor[MAX_CHAR];
+	int idNacionalidad_FK;
+	int isEmpty;
+}eAutor;
+
+typedef struct{
+	int idLibro;
+	char titulo[MAX_CHAR];
+	eFecha fechaDePublicacion;
+	float importe;
+	int idAutor_FK;
+	int idEditorial_FK;
+	int isEmpty;
+}eLibro;
+
+typedef struct{
+	int contador;
+	int contadorNoSup;
+	int contadorFecha;
+	eFecha auxFecha;
+	float acumulador;
+	int isEmpty;
+}eAuxiliar;
+
+//
+void eFecha_printOne(eFecha fecha);
+int eFecha_printAll(eFecha arrayFecha[], int len, int state);
+eFecha eFechaLoadOne();
+
+//
+void ePais_printOne(ePais pais);
+int ePais_printAll(ePais arrayPais[], int len, int state);
+
+void eEditorial_printOne(eEditorial edit);
+int eEditorial_printAll(eEditorial arrayEdit[], int len, int state);
+
+void eAutor_printOne(eAutor autor);
+int eAutor_printAll(eAutor arrayAutor[], int len, int state);
+
+//
+int eLibro_initArray(eLibro arrayLibro[], int len);
+void eLibro_printOne(eLibro lib);
+int eLibro_printAll(eLibro arrayLibro[], int len, int state);
+eLibro eLibro_LoadOne();
+int eLibro_SearchEmpty(eLibro arrayProducto[], int len);
+int eLibro_SearchOcupado(eLibro arrayProducto[], int len);
+int eLibro_SearchIndexByID(eLibro arrayProducto[], int len, int id);
+int eLibro_Charge(eLibro arrayProducto[], int len);
+int eLibro_Discharge(eLibro arrayProducto[], int len);
+int eLibro_Modify(eLibro arrayProducto[], int len);
+int eLibro_SortByTitulo(eLibro arrayLibro[], int len, int orden);
+int eLibro_SortByAutor_Titulo(eLibro arrayLibro[], int len, int ordenAutor);
+
+//
+
+int eAuxiliar_initArray(eAuxiliar arrayAux[], eLibro arrayLibro[], int len);
+int eAuxiliar_Count(eAuxiliar arrayAux[], eLibro arrayLibro[], int len);
+float eAuxiliar_Accum(eAuxiliar arrayAux[], eLibro arrayLibro[], int len);
+int eAuxiliar_Dividir(float *pResultado, int operador1, int operador2);
+int eAuxiliar_CountNoSup(eAuxiliar arrayAux[], eLibro arrayLibro[], int len, float promedio);
+
+
+#endif /* LIBRO_H_ */

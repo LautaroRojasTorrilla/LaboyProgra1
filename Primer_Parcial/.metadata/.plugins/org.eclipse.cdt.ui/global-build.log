@@ -1,0 +1,349 @@
+Info: Nothing to build for Parcial_1
+18:19:49 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+Info: Nothing to build for Parcial_1
+18:20:01 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:20:07 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+Info: Nothing to build for Parcial_1
+Info: Nothing to build for Parcial_1
+18:55:31 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+..\src\Parcial_1.c: In function 'main':
+..\src\Parcial_1.c:47:8: warning: unused variable 'arrayTipos' [-Wunused-variable]
+  eTipo arrayTipos[MAX_TIPOS] = {
+        ^~~~~~~~~~
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+18:57:52 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+18:58:16 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+18:58:32 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+Info: Nothing to build for Parcial_1
+19:06:37 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+19:07:09 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+19:07:49 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+19:09:11 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+19:12:04 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+19:12:06 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+Info: Nothing to build for Parcial_1
+19:18:32 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+19:32:10 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+Info: Nothing to build for Parcial_1
+19:41:02 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+In file included from ..\src\Libro.c:8:0:
+..\src\Libro.h:102:115: error: redefinition of parameter 'len2'
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len2, int decada, int state);
+                                                                                                                   ^~~~
+..\src\Libro.h:102:105: note: previous definition of 'len2' was here
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len2, int decada, int state);
+                                                                                                         ^~~~
+..\src\Libro.c: In function 'eLibro_printExtyDecada':
+..\src\Libro.c:487:20: error: 'len' undeclared (first use in this function)
+    for (i = 0; i < len; ++i) // libros
+                    ^~~
+..\src\Libro.c:487:20: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Libro.c:495:42: error: 'arrayEdit' undeclared (first use in this function)
+         (arrayLibro[i].idEditorial_FK == arrayEdit[k].idEditorial))
+                                          ^~~~~~~~~
+19:43:44 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+In file included from ..\src\Libro.c:8:0:
+..\src\Libro.h:102:115: error: redefinition of parameter 'len2'
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len2, int decada, int state);
+                                                                                                                   ^~~~
+..\src\Libro.h:102:105: note: previous definition of 'len2' was here
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len2, int decada, int state);
+                                                                                                         ^~~~
+..\src\Libro.c: In function 'eLibro_printExtyDecada':
+..\src\Libro.c:487:20: error: 'len' undeclared (first use in this function)
+    for (i = 0; i < len; ++i) // libros
+                    ^~~
+..\src\Libro.c:487:20: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Libro.c:495:42: error: 'arrayEdit' undeclared (first use in this function)
+         (arrayLibro[i].idEditorial_FK == arrayEdit[k].idEditorial))
+                                          ^~~~~~~~~
+19:44:28 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:115: error: redefinition of parameter 'len2'
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len2, int decada, int state);
+                                                                                                                   ^~~~
+..\src\Libro.h:102:105: note: previous definition of 'len2' was here
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len2, int decada, int state);
+                                                                                                         ^~~~
+19:55:55 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:115: error: redefinition of parameter 'len2'
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len2, int decada, int state);
+                                                                                                                   ^~~~
+..\src\Libro.h:102:105: note: previous definition of 'len2' was here
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len2, int decada, int state);
+                                                                                                         ^~~~
+..\src\Parcial_1.c: In function 'main':
+..\src\Parcial_1.c:180:67: error: '(eLibro *)&arrayLibros' is a pointer; did you mean to use '->'?
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, arrayLibros.fechaDePublicacion, MAX_LIBROS, MAX_AUTOR, MAX_LIBROS, 1990, OCUPADO);
+                                                                   ^
+                                                                   ->
+19:56:09 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+..\src\Parcial_1.c: In function 'main':
+..\src\Parcial_1.c:180:67: error: '(eLibro *)&arrayLibros' is a pointer; did you mean to use '->'?
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, arrayLibros.fechaDePublicacion, MAX_LIBROS, MAX_AUTOR, MAX_LIBROS, 1990, OCUPADO);
+                                                                   ^
+                                                                   ->
+19:56:33 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+..\src\Parcial_1.c: In function 'main':
+..\src\Parcial_1.c:180:56: error: incompatible type for argument 3 of 'eLibro_printExtyDecada'
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, arrayLibros->fechaDePublicacion, MAX_LIBROS, MAX_AUTOR, MAX_LIBROS, 1990, OCUPADO);
+                                                        ^~~~~~~~~~~
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:5: note: expected 'eFecha * {aka struct <anonymous> *}' but argument is of type 'eFecha {aka struct <anonymous>}'
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len3, int decada, int state);
+     ^~~~~~~~~~~~~~~~~~~~~~
+19:56:46 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+..\src\Parcial_1.c: In function 'main':
+..\src\Parcial_1.c:180:56: warning: passing argument 3 of 'eLibro_printExtyDecada' makes pointer from integer without a cast [-Wint-conversion]
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, arrayLibros->fechaDePublicacion.anio, MAX_LIBROS, MAX_AUTOR, MAX_LIBROS, 1990, OCUPADO);
+                                                        ^~~~~~~~~~~
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:5: note: expected 'eFecha * {aka struct <anonymous> *}' but argument is of type 'int'
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], eFecha arrayFecha[], int len1, int len2, int len3, int decada, int state);
+     ^~~~~~~~~~~~~~~~~~~~~~
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+19:58:35 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+..\src\Libro.c: In function 'eLibro_printExtyDecada':
+..\src\Libro.c:495:117: error: 'eLibro {aka struct <anonymous>}' has no member named 'anio'
+         arrayLibro[i].idLibro, arrayLibro[i].titulo, arrayLibro[i].importe, arrayAutor[j].nombreAutor, arrayLibro[i].anio);
+                                                                                                                     ^
+19:58:50 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+..\src\Parcial_1.c: In function 'main':
+..\src\Parcial_1.c:180:6: error: too few arguments to function 'eLibro_printExtyDecada'
+      eLibro_printExtyDecada();
+      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:5: note: declared here
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], int len1, int len2, int len3, int decada, int state);
+     ^~~~~~~~~~~~~~~~~~~~~~
+20:00:10 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+..\src\Libro.c: In function 'eLibro_printExtyDecada':
+..\src\Libro.c:476:31: error: 'len3' undeclared (first use in this function)
+   if (len1 > 0 && len2 > 0 && len3 >0)
+                               ^~~~
+..\src\Libro.c:476:31: note: each undeclared identifier is reported only once for each function it appears in
+20:00:28 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+..\src\Parcial_1.c: In function 'main':
+..\src\Parcial_1.c:180:93: error: expected ';' before ':' token
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, MAX_LIBROS, MAX_AUTOR, 1990, OCUPADO):
+                                                                                             ^
+20:00:36 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+Info: Nothing to build for Parcial_1
+20:02:05 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:05:14 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+..\src\Libro.c: In function 'eLibro_printExtyDecada':
+..\src\Libro.c:498:9: error: 'fechaDePublicacion' undeclared (first use in this function)
+         fechaDePublicacion.anio);
+         ^~~~~~~~~~~~~~~~~~
+..\src\Libro.c:498:9: note: each undeclared identifier is reported only once for each function it appears in
+20:05:57 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+Info: Nothing to build for Parcial_1
+20:11:25 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+..\src\Libro.c: In function 'eLibro_printExtyDecada':
+..\src\Libro.c:478:31: error: expected expression before 'int'
+   if (len1 > 0 && len2 > 0 && int len3 > 0)
+                               ^~~
+..\src\Libro.c:500:45: warning: format '%d' expects argument of type 'int', but argument 6 has type 'char *' [-Wformat=]
+        printf("|%5d|%-29s   |%7.2f  |%-20s|%d\n",
+                                             ^
+..\src\Libro.c:500:15: warning: too many arguments for format [-Wformat-extra-args]
+        printf("|%5d|%-29s   |%7.2f  |%-20s|%d\n",
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20:11:37 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+..\src\Libro.c: In function 'eLibro_printExtyDecada':
+..\src\Libro.c:500:45: warning: format '%d' expects argument of type 'int', but argument 6 has type 'char *' [-Wformat=]
+        printf("|%5d|%-29s   |%7.2f  |%-20s|%d\n",
+                                             ^
+..\src\Libro.c:500:15: warning: too many arguments for format [-Wformat-extra-args]
+        printf("|%5d|%-29s   |%7.2f  |%-20s|%d\n",
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Parcial_1.c: In function 'main':
+..\src\Libro.h:25:20: warning: passing argument 3 of 'eLibro_printExtyDecada' makes pointer from integer without a cast [-Wint-conversion]
+ #define MAX_LIBROS 10
+                    ^
+..\src\Parcial_1.c:180:56: note: in expansion of macro 'MAX_LIBROS'
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, MAX_LIBROS, MAX_AUTOR, 1990, OCUPADO);
+                                                        ^~~~~~~~~~
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:5: note: expected 'ePais * {aka struct <anonymous> *}' but argument is of type 'int'
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], ePais arrayPais[], int len1, int len2, int len3, int decada, int state);
+     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\Parcial_1.c:180:6: error: too few arguments to function 'eLibro_printExtyDecada'
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, MAX_LIBROS, MAX_AUTOR, 1990, OCUPADO);
+      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:5: note: declared here
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], ePais arrayPais[], int len1, int len2, int len3, int decada, int state);
+     ^~~~~~~~~~~~~~~~~~~~~~
+20:12:11 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Parcial_1.c: In function 'main':
+..\src\Libro.h:25:20: warning: passing argument 3 of 'eLibro_printExtyDecada' makes pointer from integer without a cast [-Wint-conversion]
+ #define MAX_LIBROS 10
+                    ^
+..\src\Parcial_1.c:180:56: note: in expansion of macro 'MAX_LIBROS'
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, MAX_LIBROS, MAX_AUTOR, 1990, OCUPADO);
+                                                        ^~~~~~~~~~
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:5: note: expected 'ePais * {aka struct <anonymous> *}' but argument is of type 'int'
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], ePais arrayPais[], int len1, int len2, int len3, int decada, int state);
+     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\Parcial_1.c:180:6: error: too few arguments to function 'eLibro_printExtyDecada'
+      eLibro_printExtyDecada(arrayLibros, arrayAutores, MAX_LIBROS, MAX_AUTOR, 1990, OCUPADO);
+      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Parcial_1.c:14:0:
+..\src\Libro.h:102:5: note: declared here
+ int eLibro_printExtyDecada(eLibro arrayLibro[], eAutor arrayAutor[], ePais arrayPais[], int len1, int len2, int len3, int decada, int state);
+     ^~~~~~~~~~~~~~~~~~~~~~
+20:13:22 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:13:27 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:13:57 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:15:25 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:15:56 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:16:35 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:19:34 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:22:09 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:22:40 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:24:30 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:24:48 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 
+20:28:39 **** Incremental Build of configuration Debug for project Parcial_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1.o" "..\\src\\Parcial_1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.c" 
+gcc -o Parcial_1.exe "src\\Input.o" "src\\Libro.o" "src\\Parcial_1.o" 

@@ -1,0 +1,56 @@
+/*
+ ============================================================================
+ Name        : Memoria.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+	int idProducto;
+	char descripcion[50];
+	float importe;
+	//int isEmpty;
+}eProducto;
+
+eProducto* eProducto_ForcedLoad();
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	eProducto* producto;
+
+	producto = eProducto_ForcedLoad();
+
+	printf("--%d --%s --%.2f\n", producto->idProducto, producto->descripcion, producto->importe);
+	printf("--%d --%s --%.2f\n", producto->idProducto, producto->descripcion, producto->importe);
+	printf("--%d --%s --%.2f\n", producto->idProducto, producto->descripcion, producto->importe);
+	printf("--%d --%s --%.2f\n", producto->idProducto, producto->descripcion, producto->importe);
+	printf("--%d --%s --%.2f\n", producto->idProducto, producto->descripcion, producto->importe);
+
+	return EXIT_SUCCESS;
+}
+
+eProducto* eProducto_ForcedLoad()
+{
+
+	eProducto* pProducto;
+	//le pido que me reserve el tamaño de la estructura.
+	// como es void, la sugerencia es castearlo
+	pProducto = (eProducto*) malloc(sizeof(eProducto));
+
+	auxProducto.idProducto = 100;
+	strcpy(auxProducto.descripcion, "prueba");
+	printf("\n%s", auxProducto.descripcion);
+	auxProducto.importe = 15.50;
+
+	pProducto = &auxProducto;
+
+	return pProducto;
+}

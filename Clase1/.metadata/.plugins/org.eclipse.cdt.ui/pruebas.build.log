@@ -1,0 +1,14 @@
+14:55:46 **** Rebuild of configuration Debug for project pruebas ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\pruebas.o" "..\\src\\pruebas.c" 
+..\src\pruebas.c: In function 'main':
+..\src\pruebas.c:26:17: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat=]
+         scanf("%d", numero);
+                 ^
+..\src\pruebas.c:26:9: warning: 'numero' may be used uninitialized in this function [-Wmaybe-uninitialized]
+         scanf("%d", numero);
+         ^~~~~~~~~~~~~~~~~~~
+gcc -o pruebas.exe "src\\pruebas.o" 
+
+14:55:47 Build Finished. 0 errors, 2 warnings. (took 901ms)
+

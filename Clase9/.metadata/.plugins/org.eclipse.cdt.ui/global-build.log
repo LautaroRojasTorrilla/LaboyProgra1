@@ -1,0 +1,101 @@
+14:57:55 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio 8.2B.o" "..\\src\\Ejercicio 8.2B.c" 
+gcc -o "Ejercicio 8.2B.exe" "src\\Ejercicio 8.2B.o" "src\\Input.o" "src\\Producto.o" 
+17:24:52 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio 8.2B.o" "..\\src\\Ejercicio 8.2B.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'eProducto_Modify':
+..\src\Producto.c:324:9: error: 'producto' undeclared (first use in this function)
+  return producto;
+         ^~~~~~~~
+..\src\Producto.c:324:9: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Producto.c:295:12: warning: variable 'bufferProducto' set but not used [-Wunused-but-set-variable]
+  eProducto bufferProducto;
+            ^~~~~~~~~~~~~~
+..\src\Producto.c:292:6: warning: unused variable 'bufferOpcionID' [-Wunused-variable]
+  int bufferOpcionID;
+      ^~~~~~~~~~~~~~
+..\src\Producto.c:291:6: warning: unused variable 'opcionID' [-Wunused-variable]
+  int opcionID;
+      ^~~~~~~~
+..\src\Producto.c:290:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno = -1;
+      ^~~~~~~
+..\src\Producto.c:325:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+17:25:17 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'eProducto_Modify':
+..\src\Producto.c:324:9: error: incompatible types when returning type 'int' but 'eProducto {aka struct <anonymous>}' was expected
+  return retorno;
+         ^~~~~~~
+..\src\Producto.c:295:12: warning: variable 'bufferProducto' set but not used [-Wunused-but-set-variable]
+  eProducto bufferProducto;
+            ^~~~~~~~~~~~~~
+..\src\Producto.c:292:6: warning: unused variable 'bufferOpcionID' [-Wunused-variable]
+  int bufferOpcionID;
+      ^~~~~~~~~~~~~~
+..\src\Producto.c:291:6: warning: unused variable 'opcionID' [-Wunused-variable]
+  int opcionID;
+      ^~~~~~~~
+..\src\Producto.c:325:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+17:27:45 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio 8.2B.o" "..\\src\\Ejercicio 8.2B.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'eProducto_Modify':
+..\src\Producto.c:293:12: warning: variable 'bufferProducto' set but not used [-Wunused-but-set-variable]
+  eProducto bufferProducto;
+            ^~~~~~~~~~~~~~
+gcc -o "Ejercicio 8.2B.exe" "src\\Ejercicio 8.2B.o" "src\\Input.o" "src\\Producto.o" 
+17:46:36 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'eProducto_Modify':
+..\src\Producto.c:304:38: error: 'i' undeclared (first use in this function)
+    eProducto_printOne(bufferProducto[i]);
+                                      ^
+..\src\Producto.c:304:38: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Producto.c:293:12: warning: variable 'bufferProducto' set but not used [-Wunused-but-set-variable]
+  eProducto bufferProducto;
+            ^~~~~~~~~~~~~~
+18:45:46 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'eProducto_Modify':
+..\src\Producto.c:305:37: error: subscripted value is neither array nor pointer nor vector
+    eProducto_printOne(bufferProducto[bufferIndex]);
+                                     ^
+18:46:04 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -o "Ejercicio 8.2B.exe" "src\\Ejercicio 8.2B.o" "src\\Input.o" "src\\Producto.o" 
+Info: Nothing to build for Ejercicio 8.2B
+18:46:49 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio 8.2B.o" "..\\src\\Ejercicio 8.2B.c" 
+gcc -o "Ejercicio 8.2B.exe" "src\\Ejercicio 8.2B.o" "src\\Input.o" "src\\Producto.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file Ejercicio 8.2B.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:46:53 **** Incremental Build of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -o "Ejercicio 8.2B.exe" "src\\Ejercicio 8.2B.o" "src\\Input.o" "src\\Producto.o" 
+Info: Nothing to build for Ejercicio 8.2B
+21:42:05 **** Rebuild of configuration Debug for project Ejercicio 8.2B ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Input.o" "..\\src\\Input.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio 8.2B.o" "..\\src\\Ejercicio 8.2B.c" 
+gcc -o "Ejercicio 8.2B.exe" "src\\Ejercicio 8.2B.o" "src\\Input.o" "src\\Producto.o" 
+02:38:41 **** Rebuild of configuration Debug for project ArraysDeEstructuras ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Empleado.o" "..\\src\\Empleado.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArraysDeEstructuras.o" "..\\src\\ArraysDeEstructuras.c" 
+gcc -o ArraysDeEstructuras.exe "src\\ArraysDeEstructuras.o" "src\\Empleado.o" 

@@ -1,0 +1,20 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 30 ago. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+#include "conversion.h"
+
+float GetFloatValMaxMin(char *mensaje, int minimo, int maximo)
+{
+	float numero;
+
+	do{
+		printf("%s", mensaje);
+		scanf("%f", &numero);
+	}
+	while(numero > maximo || numero < minimo || minimo > maximo);
+
+	return numero;
+}

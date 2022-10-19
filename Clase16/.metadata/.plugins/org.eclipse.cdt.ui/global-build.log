@@ -1,0 +1,22 @@
+22:00:04 **** Incremental Build of configuration Debug for project Vector dinamico ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vector dinamico.o" "..\\src\\Vector dinamico.c" 
+..\src\Vector dinamico.c: In function 'main':
+..\src\Vector dinamico.c:37:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int **' [-Wformat=]
+  printf("%d--%d\n", &pVector, pVector);
+           ^
+..\src\Vector dinamico.c:37:15: warning: format '%d' expects argument of type 'int', but argument 3 has type 'int *' [-Wformat=]
+  printf("%d--%d\n", &pVector, pVector);
+               ^
+gcc -o "Vector dinamico.exe" "src\\Vector dinamico.o" 
+22:00:34 **** Incremental Build of configuration Debug for project Vector dinamico ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vector dinamico.o" "..\\src\\Vector dinamico.c" 
+..\src\Vector dinamico.c: In function 'main':
+..\src\Vector dinamico.c:37:11: warning: format '%i' expects argument of type 'int', but argument 2 has type 'int **' [-Wformat=]
+  printf("%i--%i\n", &pVector, pVector);
+           ^
+..\src\Vector dinamico.c:37:15: warning: format '%i' expects argument of type 'int', but argument 3 has type 'int *' [-Wformat=]
+  printf("%i--%i\n", &pVector, pVector);
+               ^
+gcc -o "Vector dinamico.exe" "src\\Vector dinamico.o" 

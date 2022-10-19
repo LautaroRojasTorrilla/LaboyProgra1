@@ -1,0 +1,36 @@
+/*
+ ============================================================================
+ Name        : Ejercicio.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void SwapInt(int * num, int* num2);
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	int numero = 10;
+	int numero2 = 25;
+
+	SwapInt(&numero, &numero2);
+
+	printf("Numero 1: %d\nNumero 2: %d\n", numero, numero2);
+
+	return EXIT_SUCCESS;
+}
+
+void SwapInt(int* num, int* num2)
+{
+	int* pAuxNum;
+
+	pAuxNum = *num;
+	*num = *num2;
+	*num2 = pAuxNum;
+}

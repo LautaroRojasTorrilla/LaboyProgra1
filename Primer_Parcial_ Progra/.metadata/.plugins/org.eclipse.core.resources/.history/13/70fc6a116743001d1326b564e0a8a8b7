@@ -1,0 +1,15 @@
+/*
+ * Funcion.c
+ *
+ *  Created on: 3 oct. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+#include "Funcion.h"
+
+float FuncionCalculoDescuento(float importe, int porcentaje)
+{
+	int retorno = -1;
+
+	return retorno;
+}

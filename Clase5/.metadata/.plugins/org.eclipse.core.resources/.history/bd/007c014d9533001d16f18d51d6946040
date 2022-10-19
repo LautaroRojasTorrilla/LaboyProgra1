@@ -1,0 +1,35 @@
+/*
+ * Funciones.h
+ *
+ *  Created on: 5 sep. 2022
+ *      Author: Rojas Torrilla Lautaro
+ */
+
+#ifndef FUNCIONES_H_
+#define FUNCIONES_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAXINT 1000
+#define MININT -1000
+#define INGRESO 3
+
+int GetInt(char *mensaje, int minimo, int maximo);
+char GetChar(char *mensaje);
+void CargarVectorEnteros(char *mensaje, int numeros[], int tam, int max, int min);
+int ContarPositivos (int numeros[], int tam);
+int ContarNegativos (int numeros[], int tam);
+int AcumularVectorPares(int numeros[], int tam);
+int MayorVectorImpar(int numeros[], int tam);
+void MostrarVectorEnteros(int numeros[], int tam);
+void MostrarVectorPares(int numeros[], int tam);
+void MostrarVectorPosicionImpar(int numeros[], int tam);
+void MostrarVectorNumerosRepetidos(int numeros[], int tam);
+void OrdenarVectorAscendente(int numeros[], int tam);
+void OrdenarVectorDescendente(int numeros[], int tam);
+
+
+
+
+#endif /* FUNCIONES_H_ */

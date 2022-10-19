@@ -1,0 +1,42 @@
+/*
+ ============================================================================
+ Name        : Ejercicio 17.2
+ Author      : Rojas Torrilla Lautaro
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void) {
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}
+
+// recibo como puntero parray porque justamente es un array
+// recibo como puntero sizeactual porque es el que necesito modificar
+
+int ResizeArray(int* pArray, int* sizeActual, int sizeNuevo)
+{
+	int retorno = -1;
+	int* pArrayTemp = NULL;
+
+	if (pArray != NULL && sizeActual != NULL && sizeNuevo >= 0)
+	{
+		pArrayTemp = (int*) realloc(pArray, sizeof(int) * sizeNuevo);
+
+		if (pArrayTemp != NULL)
+		{
+			*sizeActual = sizeNuevo;
+			pArray = pArrayTemp;
+			pArrayTemp = NULL; // no tiene mucho sentido pero se deja.
+			retorno = 0;
+		}
+	}
+	return retorno;
+}
+

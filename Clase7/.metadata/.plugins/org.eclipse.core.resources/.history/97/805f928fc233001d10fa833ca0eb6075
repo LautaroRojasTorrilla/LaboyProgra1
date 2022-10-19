@@ -1,0 +1,33 @@
+/*
+ ============================================================================
+ Name        : Estructuras.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CANTIDAD 3
+
+struct eEmpleado{
+	int legajo;
+	float salario;
+	char sexo;
+	char nombre[31];
+	int estado;
+};
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	struct eEmpleado empleado;
+	int i;
+
+
+
+	return EXIT_SUCCESS;
+}

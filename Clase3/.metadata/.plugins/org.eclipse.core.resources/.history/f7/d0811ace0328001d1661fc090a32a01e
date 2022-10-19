@@ -1,0 +1,40 @@
+/*
+ ============================================================================
+ Name        : 2.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int siEsPar(int numero);
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	int esONoPar = 4;
+
+	if(siEsPar(esONoPar) == 0)
+	{
+		puts("no es par");
+	}
+	else
+	{
+		puts("es par.");
+	}
+
+	return EXIT_SUCCESS;
+}
+
+int siEsPar(int numero)
+{
+	int retorno = 0;
+	if (numero/2 == 0) {
+		retorno = 1;
+	}
+	return retorno;
+}

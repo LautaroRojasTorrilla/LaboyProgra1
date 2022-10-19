@@ -1,0 +1,34 @@
+/*
+ ============================================================================
+ Name        : ejemplo.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	FILE *pArch;
+
+	pArch = fopen("banco.dat", "rb");
+
+	if(pArch == NULL)
+	{
+		printf("\nEl archivo no puede ser abierto");
+		exit (1);
+	}
+	else
+	{
+		printf("\nEl archivo se abrio correctamente");
+	}
+
+	fclose(pArch);
+
+	return EXIT_SUCCESS;
+}

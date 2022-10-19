@@ -1,0 +1,62 @@
+/*
+ ============================================================================
+ Name        : Ejercicio 2.1
+ Author      : Rojas Torrilla Lautaro
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+/*
+ Ejercicio 2-2:
+	Ingresar 10 números enteros, distintos de cero. Mostrar:
+
+	Cantidad de pares e impares.
+	El menor número ingresado.
+	De los pares el mayor número ingresado.
+	Suma de los positivos.
+	Producto de los negativos.
+
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CANTIDAD 10
+
+int getIntNoCero(char *mensaje, int reintentos, char *mensajeError)
+{
+	int buffer;
+	int numero;
+	int retornoScanF;
+
+	printf("%s", mensaje);
+	retornoScanF = scanf("%d", &buffer);
+
+	do{
+		if(retornoScanF == 0){
+			printf("%s", mensajeError);
+			retornoScanF = scanf("%d", &buffer);
+			reintentos--;
+		}else{
+			reintentos = 0;
+			numero = buffer;
+		}
+	}while(reintentos>0);
+
+	return numero;
+}
+
+int main(void) {
+
+	int numeroIngresado;
+	int contador = 0;
+	int acumulador = 0;
+
+	//hacer el for
+	// y un if adentro para validar que no sea 0
+
+	numeroIngresado = getIntNoCero(Favor de ingresar un numero, 5, error, no puede ser cero);
+	printf("%d", numeroIngresado);
+
+	return EXIT_SUCCESS;
+}

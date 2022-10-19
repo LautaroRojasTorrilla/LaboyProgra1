@@ -1,0 +1,50 @@
+/*
+ ============================================================================
+ Name        : Archivo.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+	short int dia;
+	short int mes;
+	int anio;
+}eFecha;
+
+typedef struct{
+	char dni[9];
+	char apeNom[41];
+	eFecha fechaNac;
+}ePersona;
+
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	ePersona persona;
+	char strDia[3];
+	char strMes[3];
+	char strAnio[3];
+
+	// ARCHIVO BINARIO, puedo trabajar la variable persona tal cual esta.
+
+	// ARCHIVO TEXTO, debo transformar a texto:
+	persona.fechaNac.dia = 30;
+	persona.fechaNac.mes = 10;
+	persona.fechaNac.anio = 1960;
+	printf("%d/%d/%d\n", persona.fechaNac.dia, persona.fechaNac.mes, persona.fechaNac.anio); // muestra por pantalla lo que está dentro de los paréntesis
+	//sprintf();
+
+
+
+
+
+	return EXIT_SUCCESS;
+}

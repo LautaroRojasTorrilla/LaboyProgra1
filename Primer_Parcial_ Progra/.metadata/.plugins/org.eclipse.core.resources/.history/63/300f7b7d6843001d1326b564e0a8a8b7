@@ -1,0 +1,23 @@
+/*
+ ============================================================================
+ Name        : Primer_Parcial_Progra.c
+ Author      : Rojas Torrilla Lautaro
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Funcion.h"
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	int importe;
+
+	utn_getFloat("Favor de ingresar un importe", "Error, debe ingresar un numero entre 1 y 50000", MIN, maximo, reintentos, pResultado)
+
+	return EXIT_SUCCESS;
+}
